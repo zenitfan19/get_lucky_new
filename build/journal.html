@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Журнал техподдержки</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link href="assets/styles/jquery.fancybox.css" rel="stylesheet">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+    <script src="assets/scripts/jquery-3.3.1.min.js"></script>
+    <script src="assets/scripts/jquery.fancybox.js">      </script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-title">Имя (ID) оператора</div>
+      <div class="header-menu"><a class="header-menu__link active" href="journal.html">Журнал техподдержки</a><a class="header-menu__link" href="gift-moderation.html">Модерация подарков</a><a class="header-menu__link" href="acc-moderation.html">Модерация аккаунтов</a>
+      </div>
+      <div class="header-exit">       <a class="header-exit__btn" href=""><img class="header-exit__img" src="assets/images/log-out_image.svg"><span>Выход</span></a></div>
+    </div>
+    <div class="main-container">
+      <div class="search-form">
+        <form action="">
+          <input type="search" placeholder="Поиск">
+        </form>
+      </div>
+      <table class="requests" cellspacing="0">
+        <thead class="requests-header">
+          <tr> 
+            <td>№ заявки</td>
+            <td>id</td>
+            <td>дата / время</td>
+            <td>тема сообщения</td>
+            <td>текст / звонок</td>
+            <td>статус</td>
+          </tr>
+        </thead>
+        <tbody class="requests-content">
+          <tr>
+            <td>100500</td>
+            <td>01123</td>
+            <td>16.01.2019 / 11:30</td>
+            <td>техническая / пожелания и предложения</td>
+            <td><a class="requests-content__link" data-fancybox data-src="#modal-phone">звонок</a></td>
+            <td>решена / отложена</td>
+          </tr>
+          <tr>
+            <td>100501</td>
+            <td>01124</td>
+            <td>15.01.2019 / 10:25</td>
+            <td>техническая / пожелания и предложения</td>
+            <td><a class="requests-content__link" data-fancybox data-src="#modal-text">текст</a></td>
+            <td>решена / отложена    </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="modal-phone">
+      <div class="modal-phone-container">
+        <div class="modal-phone-info">
+          <p>ID</p>
+          <p>Username / Полное название компании</p>
+          <p>ФИО / Фактическое название компании</p>
+          <p>Телефон</p>
+          <p>E-mail</p>
+          <p>Временной интервал для созвона (10:00-18:00)</p><br>
+          <p>Тема сообщения</p>
+        </div>
+        <div class="modal-phone-links"><a class="requests-content__link">обращение от 01.01.2019</a><br><a class="requests-content__link">обращение от 05.10.2018</a><br><a class="requests-content__link">обращение от 10.12.2018</a><a class="requests-content__extend-link"><img src="assets/images/extend.svg"></a></div>
+        <div class="modal-phone-comment">
+          <textarea class="modal-phone-comment__textarea" placeholder="Комментарий оператора"></textarea>
+        </div>
+        <div class="modal-phone-buttons"><a class="modal-phone-buttons__delay"><span>Заявка отложена</span></a><a class="modal-phone-buttons__solve"><span>Проблема устранена</span></a></div>
+      </div>
+    </div>
+    <div id="modal-text">
+      <div class="modal-phone-container">
+        <div class="modal-phone-info">
+          <p>ID</p>
+          <p>Username / Полное название компании</p>
+          <p>ФИО / Фактическое название компании</p>
+          <p>Тема сообщения</p>
+          <p>Телефон</p>
+          <p>E-mail  </p>
+        </div>
+        <div class="modal-phone-comment">
+          <textarea class="modal-phone-comment__textarea modal-phone-comment-new" placeholder="Тело сообщения"></textarea>
+        </div>
+        <div class="modal-phone-images"><img src="assets/images/img-placeholder.png"><img src="assets/images/img-placeholder.png"><img src="assets/images/img-placeholder.png"><img src="assets/images/img-placeholder.png"><img src="assets/images/img-placeholder.png"></div>
+        <div class="modal-phone-links modal-phone-links-new"><a class="requests-content__link">обращение от 01.01.2019</a><br><a class="requests-content__link">обращение от 05.10.2018</a><br><a class="requests-content__link">обращение от 10.12.2018</a><a class="requests-content__extend-link"><img src="assets/images/extend.svg"></a></div>
+        <div class="modal-phone-comment">
+          <textarea class="modal-phone-comment__textarea" placeholder="Ответ оператора на сообщение"></textarea>
+        </div>
+        <div class="modal-phone-buttons modal-phone-buttons-new"><a class="modal-phone-buttons__delay"><span>Заявка отложена</span></a><a class="modal-phone-buttons__solve"><span>Проблема устранена</span></a></div>
+      </div>
+    </div>
+  </body>
+</html>

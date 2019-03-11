@@ -1,0 +1,7 @@
+touch .gitignore gulpfile.js README.md
+git init
+npm init -y
+npm i -D gulp gulp-pug gulp-sass gulp-rename gulp-sourcemaps del browser-sync gulp-imagemin imagemin-pngquant gulp-cache gulp-autoprefixer
+mkdir -p src/{fonts,images,scripts,styles/{common,pages},templates/{common,pages}}
+touch src/templates/{template.pug,pages/{index.pug,main.pug},common/{header.pug,footer.pug,popup.pug}}
+touch src/styles/{app.scss,common/{header.scss,footer.scss,adaptive.scss,},pages/index.scss}

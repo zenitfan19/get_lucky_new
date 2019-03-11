@@ -1,0 +1,101 @@
+extends ../template
+
+block variables
+    - var title = 'Журнал техподдержки'
+    - var link_id = 1
+
+
+block content
+    .main-container
+        .search-form
+            form(action="")
+                input(type="search", placeholder="Поиск")       
+        table.requests(cellspacing=0)
+            thead.requests-header
+                tr 
+                    td № заявки
+                    td id
+                    td дата / время
+                    td тема сообщения
+                    td текст / звонок
+                    td статус
+            tbody.requests-content
+                tr
+                    td 100500
+                    td 01123
+                    td 16.01.2019 / 11:30
+                    td техническая / пожелания и предложения
+                    td
+                        a.requests-content__link(data-fancybox data-src="#modal-phone") звонок
+                    td решена / отложена
+                tr
+                    td 100501
+                    td 01124
+                    td 15.01.2019 / 10:25
+                    td техническая / пожелания и предложения
+                    td
+                        a.requests-content__link(data-fancybox data-src="#modal-text") текст
+                    td решена / отложена    
+    #modal-phone
+        .modal-phone-container
+            .modal-phone-info
+                p ID
+                p Username / Полное название компании
+                p ФИО / Фактическое название компании
+                p Телефон
+                p E-mail
+                p Временной интервал для созвона (10:00-18:00)
+                br
+                p Тема сообщения
+            
+            .modal-phone-links
+                a.requests-content__link обращение от 01.01.2019
+                br
+                a.requests-content__link обращение от 05.10.2018
+                br
+                a.requests-content__link обращение от 10.12.2018
+                a.requests-content__extend-link
+                    img(src="assets/images/extend.svg")
+            .modal-phone-comment
+                textarea.modal-phone-comment__textarea(placeholder="Комментарий оператора")
+            .modal-phone-buttons
+                a.modal-phone-buttons__delay
+                    span Заявка отложена
+                a.modal-phone-buttons__solve
+                    span Проблема устранена
+
+    #modal-text
+        .modal-phone-container
+            .modal-phone-info
+                p ID
+                p Username / Полное название компании
+                p ФИО / Фактическое название компании
+                p Тема сообщения
+                p Телефон
+                p E-mail  
+
+            .modal-phone-comment
+                textarea.modal-phone-comment__textarea.modal-phone-comment-new(placeholder="Тело сообщения")
+
+            .modal-phone-images
+                img(src="assets/images/img-placeholder.png")
+                img(src="assets/images/img-placeholder.png")
+                img(src="assets/images/img-placeholder.png")
+                img(src="assets/images/img-placeholder.png")
+                img(src="assets/images/img-placeholder.png")
+
+            .modal-phone-links.modal-phone-links-new
+                a.requests-content__link обращение от 01.01.2019
+                br
+                a.requests-content__link обращение от 05.10.2018
+                br
+                a.requests-content__link обращение от 10.12.2018
+                a.requests-content__extend-link
+                    img(src="assets/images/extend.svg")
+            .modal-phone-comment
+                textarea.modal-phone-comment__textarea(placeholder="Ответ оператора на сообщение")
+            .modal-phone-buttons.modal-phone-buttons-new
+                a.modal-phone-buttons__delay
+                    span Заявка отложена
+                a.modal-phone-buttons__solve
+                    span Проблема устранена
