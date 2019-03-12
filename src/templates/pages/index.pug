@@ -1,7 +1,207 @@
 extends ../template
 
 block variables
-    - var title = 'Оператор'
-    - var link_id = 0
+    - var title = 'Оператор'    
 
 block content
+    .main-container.active
+        .search-form
+            form(action="")
+                input(type="search", placeholder="Поиск")       
+        table.requests(cellspacing=0)
+            thead.requests-header
+                tr 
+                    td #
+                    td id
+                    td дата / время
+                    td тема сообщения
+                    td текст / звонок
+                    td статус
+            tbody.requests-content
+                tr
+                    td 100500
+                    td 01123
+                    td 16.01.2019 / 11:30
+                    td техническая / пожелания и предложения
+                    td
+                        a.requests-content__link(data-fancybox data-src="#modal-phone" data-options='{ "touch": false }') звонок
+                    td решена / отложена
+                tr
+                    td 100501
+                    td 01124
+                    td 15.01.2019 / 10:25
+                    td техническая / пожелания и предложения
+                    td
+                        a.requests-content__link(data-fancybox data-src="#modal-text" data-options='{ "touch": false }') текст
+                    td решена / отложена
+
+
+
+
+
+
+
+    #modal-phone
+        .modal-phone-container
+            .modal-phone-info
+                p ID
+                p Username / Полное название компании
+                p ФИО / Фактическое название компании
+                p Телефон
+                p E-mail
+                p Временной интервал для созвона (10:00-18:00)
+                br
+                p Тема сообщения
+            
+            .modal-phone-links
+                a.requests-content__link обращение от 01.01.2019
+                br
+                a.requests-content__link обращение от 05.10.2018
+                br
+                a.requests-content__link обращение от 10.12.2018
+                a.requests-content__extend-link
+                    img(src="assets/images/extend.svg")
+            .modal-phone-comment
+                textarea.modal-phone-comment__textarea(placeholder="Комментарий оператора")
+            .modal-phone-buttons
+                a.modal-phone-buttons__delay
+                    span Заявка отложена
+                a.modal-phone-buttons__solve
+                    span Проблема устранена
+
+    #modal-text
+        .modal-phone-container
+            .modal-phone-info
+                p ID
+                p Username / Полное название компании
+                p ФИО / Фактическое название компании
+                p Тема сообщения
+                p Телефон
+                p E-mail  
+
+            .modal-phone-comment
+                textarea.modal-phone-comment__textarea.modal-phone-comment-new(placeholder="Тело сообщения")
+
+            .modal-phone-images
+                img(src="assets/images/img-placeholder.png")
+                img(src="assets/images/img-placeholder.png")
+                img(src="assets/images/img-placeholder.png")
+                img(src="assets/images/img-placeholder.png")
+                img(src="assets/images/img-placeholder.png")
+
+            .modal-phone-links.modal-phone-links-new
+                a.requests-content__link обращение от 01.01.2019
+                br
+                a.requests-content__link обращение от 05.10.2018
+                br
+                a.requests-content__link обращение от 10.12.2018
+                a.requests-content__extend-link
+                    img(src="assets/images/extend.svg")
+            .modal-phone-comment
+                textarea.modal-phone-comment__textarea(placeholder="Ответ оператора на сообщение")
+            .modal-phone-buttons.modal-phone-buttons-new
+                a.modal-phone-buttons__delay
+                    span Заявка отложена
+                a.modal-phone-buttons__solve
+                    span Проблема устранена
+    
+    #modal-gift
+        .modal-gift-container
+            .modal-gift-info
+                .modal-gift-image
+                    img(src="assets/images/gift-image.svg")
+                p Название подарка
+                p Описание подарка             
+            
+            .modal-gift-checkboxes
+                input(type="checkbox" id="problem1" name="problem1")
+                label(for="problem1") Несоответствие иконки товара
+                br                  
+                input(type="checkbox" id="problem2" name="problem2")
+                label(for="problem2") Несоответствие названия товару
+                br                   
+                input(type="checkbox" id="problem3" name="problem3")
+                label(for="problem3") Несоответствие подписи товару
+                    
+                            
+            .modal-gift-buttons
+                a.modal-gift-buttons__delay
+                    span Нет
+                a.modal-gift-buttons__solve
+                    span Да
+
+    #modal-acc
+        .modal-acc-container
+            .modal-acc-box
+                .modal-acc-box-images
+                    img(src="assets/images/photo1.png")                    
+                .modal-acc-box-radio
+                    input(type="radio" id="yes1" name="block1")
+                    label(for="yes1") Да
+                    input(type="radio" id="no1" name="block1")
+                    label(for="no1") Нет
+                .modal-acc-box-images                    
+                    img(src="assets/images/photo2.png")
+                .modal-acc-box-radio
+                    input(type="radio" id="yes2" name="block2")
+                    label(for="yes2") Да
+                    input(type="radio" id="no2" name="block2")
+                    label(for="no2") Нет
+            .modal-acc-box
+                .modal-acc-box-text
+                    p.modal-acc-box-text__subheader Юридическое наименование
+                    p.modal-acc-box-text__header Юридическое наименование                    
+                .modal-acc-box-radio
+                    input(type="radio" id="yes3" name="block3")
+                    label(for="yes3") Да
+                    input(type="radio" id="no3" name="block3")
+                    label(for="no3") Нет
+            .modal-acc-box
+                .modal-acc-box-text
+                    p.modal-acc-box-text__subheader Фактическое наименование
+                    p.modal-acc-box-text__header Фактическое наименование                    
+                .modal-acc-box-radio
+                    input(type="radio" id="yes4" name="block4")
+                    label(for="yes4") Да
+                    input(type="radio" id="no4" name="block4")
+                    label(for="no4") Нет
+            .modal-acc-box
+                .modal-acc-box-text
+                    p.modal-acc-box-text__subheader ОГРН
+                    p.modal-acc-box-text__header 123456789123456                    
+                .modal-acc-box-radio
+                    input(type="radio" id="yes5" name="block5")
+                    label(for="yes5") Да
+                    input(type="radio" id="no5" name="block5")
+                    label(for="no5") Нет
+            .modal-acc-box
+                .modal-acc-box-text
+                    p.modal-acc-box-text__subheader ИНН
+                    p.modal-acc-box-text__header 123456789123456                    
+                .modal-acc-box-radio
+                    input(type="radio" id="yes6" name="block6")
+                    label(for="yes6") Да
+                    input(type="radio" id="no6" name="block6")
+                    label(for="no6") Нет
+            .modal-acc-box
+                .modal-acc-box-text
+                    p.modal-acc-box-text__subheader Телефон
+                    p.modal-acc-box-text__header 123456789123456                   
+                .modal-acc-box-radio
+                    input(type="radio" id="yes7" name="block7")
+                    label(for="yes7") Да
+                    input(type="radio" id="no7" name="block7")
+                    label(for="no7") Нет
+            .modal-acc-box
+                .modal-acc-box-text
+                    p.modal-acc-box-text__subheader Описание компании
+                    p.modal-acc-box-text__header Таким образом рамки и место обучения кадров позволяет выполнять важные задания по разработке соответствующий условий активизации. Не следует, однако забывать, что новая модель организационной деятельности требуют от нас анализа систем массового участия.                   
+                .modal-acc-box-radio
+                    input(type="radio" id="yes8" name="block8")
+                    label(for="yes8") Да
+                    input(type="radio" id="no8" name="block8")
+                    label(for="no8") Нет
+                            
+            .modal-acc-buttons                
+                a.modal-acc-buttons__solve
+                    span Да

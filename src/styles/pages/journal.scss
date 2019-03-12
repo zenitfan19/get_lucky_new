@@ -1,25 +1,26 @@
 .main-container {
+    display: none;
+}
+.main-container.active {
     max-width: 100%;
-    padding: 0 9%;
+    padding: 0 15px;
     margin-top: 32px; 
     display: flex;
     flex-direction: column;
 }
-td {
-    border: 1px solid #F1F1F1;         
+tr {
+    border-top: 1px solid #dee2e6;           
 }
 .requests {
     width: 100%;
     margin-top: 20px;   
-    border-collapse: separate;    
+    border-collapse: collapse;    
 }
 .requests-header tr {
     height: 50px;
-    background: #F3F9F9;       
+    background: #212529;          
 }
-.requests-header td:nth-child(1) {    
-    border-radius: 10px 0px 0px 0px;
-}
+
 .requests-header td {
     font-family: Open Sans;
     font-style: normal;
@@ -30,23 +31,12 @@ td {
     letter-spacing: 0.02em;
     text-transform: uppercase;
 
-    color: #828282;
+    color: #fff;
 }
-.requests-content tr {
-    height: 35px;        
-}
-.requests-content tr:nth-child(even) {
-    background: #CAFFFC;
-}
-.requests-content td {
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 14px;
-    text-align: center;
-    letter-spacing: 0.02em;
 
+.requests-content td {   
+    text-align: center;
+    padding: 12px;
     color: #282828;
 }
 .requests-content__link {    
@@ -63,7 +53,7 @@ td {
     width: 233px;
     height: 35px;
     background: #FFFFFF;
-    border: 1px solid #56CCF2;
+    border: 1px solid #32383e;
     box-sizing: border-box;
     border-radius: 2px;
     font-size: 14px;
@@ -97,7 +87,7 @@ td {
     display: none;
     width: 797px;
     height: 544px;
-    background: #F3F9F9;
+    background: #D3D3D3;
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.07);
     border-radius: 10px;
     padding: 0;    
@@ -106,7 +96,7 @@ td {
     display: none;
     width: 797px;
     height: 620px;
-    background: #F3F9F9;
+    background: #D3D3D3;
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.07);
     border-radius: 10px;
     padding: 0;    

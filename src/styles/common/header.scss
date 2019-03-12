@@ -1,60 +1,59 @@
 .header {    
-    max-width: 100%;
-    height: 163px;
+    max-width: 100%;    
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     
-    padding: 0 9%;
+    padding: 15px 20px;
 
-    background: #A9FFFF;
+    background: #000;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.07);
 }
 .header-title {    
     width: 233px;
-    height: 33px;  
-    margin-bottom: 22px;  
-
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    font-size: 24px;
-
-    color: #282828;
+    height: 33px; 
+    color: #fff;
+    font-size: 1.25rem;
 }
 .header-menu {    
     width: auto;
-    height: 23px;
+    height: auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;  
-    margin-bottom: 21px; 
+    justify-content: space-between;    
 }
-.header-menu__link {
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 23px;
-    font-size: 14px;
-    letter-spacing: 0.03em;
+.header-menu__link {    
     text-transform: uppercase;
-    text-decoration: none;
-    padding: 0 15px;
+    text-decoration: none; 
+    line-height: 1.9rem;      
     
-    color: #BDBDBD;
+    color: #fff;
+
+    display: block;
+    border-radius: .25rem;
+    padding: .5rem 1rem;
+    
 }
 .header-menu__link.active {
-    color: #282828;
+    color: #000;
+    background-color: #fff;
 }
 .header-exit {
     width: 111px;
     height: 45px;
-    background: #56CCF2;
+    background: transparent;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.07);
-    border-radius: 5px;  
-    margin-bottom: 14px; 
+    border-radius: 5px;
+    border: 1px solid #007bff;
+    margin-left: 20px;   
+}
+.header-exit:hover {    
+    background: #007bff;
+    .header-exit__btn span {    
+        text-transform: uppercase;
+        color: #fff;
+    }
 }
 .header-exit__btn {
     display: block;
@@ -63,19 +62,12 @@
     text-decoration: none;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;     
 }
-.header-exit__btn span {
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 23px;
-    font-size: 14px;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;    
-
-    color: #FFFFFF;
+.header-exit__btn span {    
+    text-transform: uppercase;
+    color: #007bff;
 }
-.header-exit__img {
-    margin-right: 7px;
-}
+// .header-exit__img {
+//     margin-right: 7px;
+// }

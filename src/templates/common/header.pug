@@ -1,25 +1,12 @@
 .header
-    .header-title Имя (ID) оператора
+    .header-title GetLucky
     .header-menu
-        case link_id
-            when 1
-                a.header-menu__link.active(href="journal.html") Журнал техподдержки
-                a.header-menu__link(href="gift-moderation.html") Модерация подарков
-                a.header-menu__link(href="acc-moderation.html") Модерация аккаунтов
-            when 2
-                a.header-menu__link(href="journal.html") Журнал техподдержки
-                a.header-menu__link.active(href="gift-moderation.html") Модерация подарков
-                a.header-menu__link(href="acc-moderation.html") Модерация аккаунтов
-            when 3
-                a.header-menu__link(href="journal.html") Журнал техподдержки
-                a.header-menu__link(href="gift-moderation.html") Модерация подарков
-                a.header-menu__link.active(href="acc-moderation.html") Модерация аккаунтов                
-            default
-                a.header-menu__link(href="journal.html") Журнал техподдержки
-                a.header-menu__link(href="gift-moderation.html") Модерация подарков
-                a.header-menu__link(href="acc-moderation.html") Модерация аккаунтов
+        a.header-menu__link.active Журнал техподдержки
+        a.header-menu__link(data-fancybox data-src="#modal-gift" data-options='{ "touch": false }') Модерация подарков
+        a.header-menu__link(data-fancybox data-src="#modal-acc" data-options='{ "touch": false }') Модерация аккаунтов
+        .header-exit
+            a.header-exit__btn(href="")               
+                span Выход       
 
-    .header-exit        
-        a.header-exit__btn(href="")
-            img.header-exit__img(src="assets/images/log-out_image.svg")
-            span Выход
+           
+        

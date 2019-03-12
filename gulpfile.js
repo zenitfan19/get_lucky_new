@@ -109,12 +109,12 @@ exports.fonts = fonts;
 
 // просто работаем
 gulp.task('default', gulp.series(
-	gulp.parallel(styles, templates),
+	gulp.parallel(styles, templates, scripts),
 	gulp.parallel(watch, server)
 ));
 
 // контрольная сборка на продакшен
-gulp.task('build', gulp.parallel(
+gulp.task('build', gulp.series(
 	clean,
 	gulp.parallel(styles, templates, images, scripts, fonts)
 ));
