@@ -44,6 +44,12 @@ tr {
     cursor: pointer;
     
 }
+.requests-content__link.blue {    
+    text-decoration-line: underline;
+    cursor: pointer;
+    color:#006bf2;
+    
+}
 .search-form {
     align-self: flex-end;    
 }
