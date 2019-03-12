@@ -74,12 +74,19 @@ input[type="radio"]:not(:checked)
 }
 
 input[type="checkbox"]:checked + label, 
-input[type="checkbox"]:not(:checked) + label, 
+input[type="checkbox"]:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
 input[type="radio"]:checked + label, 
 input[type="radio"]:not(:checked) + label {
     display: inline-block;
     position: relative;
-    padding-left: 28px;
+    padding-right: 28px;
     line-height: 20px;
     cursor: pointer;
 }
@@ -109,7 +116,7 @@ input[type="radio"]:checked + label:before {
 }
 input[type="radio"]:checked + label:before,
 input[type="radio"]:not(:checked) + label:before {
-    left: 5px;
+    left: 28px;
     top: 3px;
 }
 
@@ -154,12 +161,20 @@ input[type="checkbox"]:not(:checked) + label:after {
 
 input[type="radio"]:checked + label:after, 
 input[type="radio"]:not(:checked) + label:after {
-    left: 8px;
+    left: 31px;
     top: 6px;
     width: 8px;
     height: 8px;
     border-radius: 100%;
     background-color: #fff;
+}
+input[type="radio"].radio-y:checked + label:after, 
+input[type="radio"].radio-y:not(:checked) + label:after {
+    left: 23px;
+}
+input[type="radio"].radio-y:checked + label:before, 
+input[type="radio"].radio-y:not(:checked) + label:before {
+    left: 20px;
 }
 
 input[type="checkbox"]:not(:checked) + label:after, 

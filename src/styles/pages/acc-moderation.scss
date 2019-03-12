@@ -1,6 +1,6 @@
 #modal-acc {
     display: none;
-    width: 485px;
+    width: 500px;
     height: auto;
     background: #D3D3D3;
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.07);
@@ -11,13 +11,14 @@
 }
 .modal-acc-box {
     display: grid;
-    grid-template-columns: 1fr 110px;
+    grid-template-columns: 1fr 120px;
 }
 .modal-acc-box-images {
     margin-bottom: 20px;
 }
 .modal-acc-box-radio {
     align-self: center;
+    padding-left: 10px;
 }
 .modal-acc-box-text__subheader {
     font-family: Open Sans;
@@ -37,9 +38,9 @@
 
     color: #282828;
 }
-.modal-acc-box-text {
+.modal-acc-box-text > .modal-acc-box-text__header  {
     margin-bottom: 14px;
-    text-align: justify;
+    line-height: 24px;
 }
 .modal-acc-box-text p {
     margin: 0;

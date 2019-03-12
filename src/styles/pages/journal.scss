@@ -40,10 +40,9 @@ tr {
     color: #282828;
 }
 .requests-content__link {    
-    text-decoration-line: underline;
+    text-decoration: none;
     cursor: pointer;
-
-    color: #2F80ED !important;
+    
 }
 .search-form {
     align-self: flex-end;    
