@@ -18,5 +18,8 @@ html
                 
 
     body
-        include common/header.pug
+        if !admin
+            include common/header.pug
+        else
+            include common/admin-header.pug   
         block content   

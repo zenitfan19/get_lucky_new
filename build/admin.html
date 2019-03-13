@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Администратор</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link href="assets/styles/normalize.css" rel="stylesheet">
+    <link href="assets/styles/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+    <script src="assets/scripts/jquery-3.3.1.min.js"></script>
+    <script src="assets/scripts/jquery.fancybox.js"></script>
+    <script src="assets/scripts/myscript.js">      </script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-title">GetLucky</div>
+      <div class="header-menu"><a class="header-menu__link active">Оператор</a><a class="header-menu__link">Модератор</a><a class="header-menu__link">Статистика</a><a class="header-menu__link">Аккаунты</a><a class="header-menu__link">Подарки</a><a class="header-menu__link">Изображения</a>
+        <div class="header-exit"><a class="header-exit__btn" href="">              <span>Выход       </span></a></div>
+      </div>
+    </div>
+    <div class="main-container active">       
+      <div class="right-controls">
+        <div class="control-buttons"><a class="add-btn" href=""><img src="assets/images/add-btn.svg"></a><a class="refresh-btn" href=""><img src="assets/images/refresh-btn.svg"></a></div>
+        <div class="search-form">
+          <form action="">
+            <input type="search" placeholder="Поиск">
+          </form>
+        </div>
+      </div>
+      <div class="left-tabs-headers"><a class="left-tabs__link-header active" data-page="1">решенные</a><a class="left-tabs__link-header" data-page="1">нерешенные</a><a class="left-tabs__link-header" data-page="1">отложенные</a></div>
+      <div class="link-header-container active" data-page="1">
+        <table class="requests" cellspacing="0">
+          <thead class="requests-header">
+            <tr> 
+              <td>#</td>
+              <td>id</td>
+              <td>принята</td>
+              <td>обработана</td>
+              <td>тема сообщения</td>
+              <td>текст / звонок</td>
+              <td>оператор</td>
+            </tr>
+          </thead>
+          <tbody class="requests-content">
+            <tr>
+              <td>100500</td>
+              <td>01123</td>
+              <td>16.01.2019 / 11:30</td>
+              <td>16.01.2019 / 11:43</td>
+              <td>технический</td>
+              <td><a class="requests-content__link" data-fancybox data-src="#modal-phone" data-options="{ &quot;touch&quot;: false }">звонок</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>100501</td>
+              <td>01124</td>
+              <td>15.01.2019 / 10:25</td>
+              <td>16.01.2019 / 10:50</td>
+              <td>пожелания и предложения</td>
+              <td><a class="requests-content__link" data-fancybox data-src="#modal-text" data-options="{ &quot;touch&quot;: false }">текст</a></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="link-header-container" data-page="1">
+        <table class="requests" cellspacing="0">
+          <thead class="requests-header">
+            <tr> 
+              <td>#</td>
+              <td>id</td>
+              <td>принята</td>
+              <td>обработана</td>
+              <td>тема сообщения</td>
+              <td>текст / звонок</td>
+              <td>оператор</td>
+            </tr>
+          </thead>
+          <tbody class="requests-content">
+            <tr>
+              <td>100502</td>
+              <td>01125</td>
+              <td>17.02.2019 / 13:43</td>
+              <td>17.02.2019 / 15:53</td>
+              <td>технический</td>
+              <td><a class="requests-content__link" data-fancybox data-src="#modal-phone" data-options="{ &quot;touch&quot;: false }">звонок</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>100503</td>
+              <td>01126</td>
+              <td>21.01.2019 / 09:25</td>
+              <td>21.01.2019 / 10:50</td>
+              <td>пожелания и предложения</td>
+              <td><a class="requests-content__link" data-fancybox data-src="#modal-text" data-options="{ &quot;touch&quot;: false }">текст</a></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="link-header-container" data-page="1">
+        <table class="requests" cellspacing="0">
+          <thead class="requests-header">
+            <tr> 
+              <td>#</td>
+              <td>id</td>
+              <td>принята</td>
+              <td>обработана</td>
+              <td>тема сообщения</td>
+              <td>текст / звонок</td>
+              <td>оператор</td>
+            </tr>
+          </thead>
+          <tbody class="requests-content">
+            <tr>
+              <td>100504</td>
+              <td>01127</td>
+              <td>05.02.2019 / 17:12</td>
+              <td>05.02.2019 / 17:17</td>
+              <td>технический</td>
+              <td><a class="requests-content__link" data-fancybox data-src="#modal-phone" data-options="{ &quot;touch&quot;: false }">звонок</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>100505</td>
+              <td>01128</td>
+              <td>06.02.2019 / 14:25</td>
+              <td>06.02.2019 / 15:05</td>
+              <td>пожелания и предложения</td>
+              <td><a class="requests-content__link" data-fancybox data-src="#modal-text" data-options="{ &quot;touch&quot;: false }">текст</a></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="main-container">      
+      <div class="right-controls">
+        <div class="control-buttons"><a class="add-btn" href=""><img src="assets/images/add-btn.svg"></a><a class="refresh-btn" href=""><img src="assets/images/refresh-btn.svg"></a></div>
+        <div class="search-form">
+          <form action="">
+            <input type="search" placeholder="Поиск">
+          </form>
+        </div>
+      </div>
+      <div class="left-tabs-headers"><a class="left-tabs__link-header active" data-page="2">бизнес-аккаунты</a><a class="left-tabs__link-header" data-page="2">подарки</a></div>
+      <div class="left-tabs link-header-container active" data-page="2"><a class="left-tabs__link active" data-page="2" data-header-link="1">Прошли модерацию</a><a class="left-tabs__link" data-page="2" data-header-link="1">Не прошли модерацию</a></div>
+      <div class="left-tabs link-header-container" data-page="2"><a class="left-tabs__link active" data-page="2" data-header-link="2">Прошли модерацию</a><a class="left-tabs__link" data-page="2" data-header-link="2">Не прошли модерацию           </a></div>
+      <div class="link-container active" data-page="2" data-header-link="1" data-link="1">
+        <table class="requests" cellspacing="0">
+          <thead class="requests-header">
+            <tr> 
+              <td>#</td>
+              <td>id</td>
+              <td>название</td>
+              <td>адрес</td>
+              <td>телефон</td>
+              <td>модератор                        </td>
+            </tr>
+          </thead>
+          <tbody class="requests-content">
+            <tr>
+              <td>100500</td>
+              <td>01123</td>
+              <td> </td>
+              <td> </td>
+              <td></td>
+              <td>                       </td>
+            </tr>
+            <tr>
+              <td>100501</td>
+              <td>01124</td>
+              <td> </td>
+              <td> </td>
+              <td></td>
+              <td> </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="link-container" data-page="2" data-header-link="1" data-link="2">
+        <table class="requests" cellspacing="0">
+          <thead class="requests-header">
+            <tr> 
+              <td>#</td>
+              <td>id</td>
+              <td>название</td>
+              <td>адрес</td>
+              <td>телефон</td>
+              <td>модератор</td>
+              <td>причина отказа                       </td>
+            </tr>
+          </thead>
+          <tbody class="requests-content">
+            <tr>
+              <td>100500</td>
+              <td>01123</td>
+              <td> </td>
+              <td> </td>
+              <td></td>
+              <td></td>
+              <td>                        </td>
+            </tr>
+            <tr>
+              <td>100501</td>
+              <td>01124</td>
+              <td> </td>
+              <td> </td>
+              <td></td>
+              <td></td>
+              <td> </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="left-tabs link-container" data-page="2" data-header-link="2" data-link="1"><a class="left-tabs__sublink active" data-page="2" data-header-link="2" data-link="1" data-sublink="1">Обычные</a><a class="left-tabs__sublink" data-page="2" data-header-link="2" data-link="1" data-sublink="2">Таргетированные</a><a class="left-tabs__sublink" data-page="2" data-header-link="2" data-link="1" data-sublink="3">Супертаргетированные</a><a class="left-tabs__sublink" data-page="2" data-header-link="2" data-link="1" data-sublink="4">Прикрепленные</a></div>
+      <div class="left-tabs link-container" data-page="2" data-header-link="2" data-link="2"><a class="left-tabs__sublink active" data-page="2" data-header-link="2" data-link="2" data-sublink="1">Обычные</a><a class="left-tabs__sublink" data-page="2" data-header-link="2" data-link="2" data-sublink="2">Таргетированные</a><a class="left-tabs__sublink" data-page="2" data-header-link="2" data-link="2" data-sublink="3">Супертаргетированные</a><a class="left-tabs__sublink" data-page="2" data-header-link="2" data-link="2" data-sublink="4">Прикрепленные</a></div>
+      <div class="link-subcontainer" data-page="2" data-header-link="2" data-link="1" data-sublink="1">
+        <table class="requests" cellspacing="0">
+          <thead class="requests-header">
+            <tr> 
+              <td># id</td>
+              <td>название</td>
+              <td>компания</td>
+              <td>модератор</td>
+              <td>категория</td>
+              <td>статус                       </td>
+            </tr>
+          </thead>
+          <tbody class="requests-content">
+            <tr>
+              <td>1111</td>
+              <td> </td>
+              <td> </td>
+              <td></td>
+              <td></td>
+              <td>                        </td>
+            </tr>
+            <tr>
+              <td>2222</td>
+              <td> </td>
+              <td> </td>
+              <td></td>
+              <td></td>
+              <td> </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="link-subcontainer" data-page="2" data-header-link="2" data-link="2" data-sublink="1">
+        <table class="requests" cellspacing="0">
+          <thead class="requests-header">
+            <tr> 
+              <td># id</td>
+              <td>название</td>
+              <td>компания</td>
+              <td>модератор</td>
+              <td>категория</td>
+              <td>причина отказа                       </td>
+            </tr>
+          </thead>
+          <tbody class="requests-content">
+            <tr>
+              <td>3333</td>
+              <td> </td>
+              <td> </td>
+              <td></td>
+              <td></td>
+              <td>                        </td>
+            </tr>
+            <tr>
+              <td>4444</td>
+              <td> </td>
+              <td> </td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="main-container">       
+      <div class="right-controls">
+        <div class="control-buttons"><a class="add-btn" href=""><img src="assets/images/add-btn.svg"></a><a class="refresh-btn" href=""><img src="assets/images/refresh-btn.svg"></a></div>
+        <div class="search-form">
+          <form action="">
+            <input type="search" placeholder="Поиск">
+          </form>
+        </div>
+      </div>
+      <div class="requests">
+        <table class="requests" cellspacing="0">
+          <thead class="requests-header">
+            <tr> 
+              <td>id</td>
+              <td>название</td>
+              <td>адрес</td>
+              <td>телефон</td>
+              <td>дата регистрации</td>
+              <td>последняя дата пользования</td>
+            </tr>
+          </thead>
+          <tbody class="requests-content">
+            <tr>
+              <td> <a class="requests-content__link" data-fancybox data-src="#modal-graph" data-options="{ &quot;touch&quot;: false }">123456789</a></td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td>                           </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td>                           </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="main-container">       
+      <div class="right-controls">
+        <div class="control-buttons"><a class="add-btn" href=""><img src="assets/images/add-btn.svg"></a><a class="refresh-btn" href=""><img src="assets/images/refresh-btn.svg"></a></div>
+        <div class="search-form">
+          <form action="">
+            <input type="search" placeholder="Поиск">
+          </form>
+        </div>
+      </div>
+      <div class="left-tabs-headers"><a class="left-tabs__link-header active" data-page="4">бизнес-аккаунты</a><a class="left-tabs__link-header" data-page="4">пользователи            </a></div>
+      <div class="link-header-container active" data-page="4">
+        <table class="requests" cellspacing="0">
+          <thead class="requests-header">
+            <tr> 
+              <td>id организации</td>
+              <td>id компании</td>
+              <td>название организации</td>
+              <td>статус                        </td>
+            </tr>
+          </thead>
+          <tbody class="requests-content">
+            <tr>
+              <td> <a class="requests-content__link" data-fancybox data-src="#modal-business-acc" data-options="{ &quot;touch&quot;: false }">123456789</a></td>
+              <td> </td>
+              <td> </td>
+              <td>                </td>
+            </tr>
+            <tr>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="link-header-container" data-page="4">
+        <table class="requests" cellspacing="0">
+          <thead class="requests-header">
+            <tr> 
+              <td>id</td>
+              <td>логин</td>
+              <td>параметр доступа</td>
+              <td>дата регистрации</td>
+              <td>последняя дата пользования                        </td>
+            </tr>
+          </thead>
+          <tbody class="requests-content">
+            <tr>
+              <td> <a class="requests-content__link" data-fancybox data-src="#modal-account" data-options="{ &quot;touch&quot;: false }">123456789</a></td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td>                    </td>
+            </tr>
+            <tr>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="main-container">       
+      <div class="right-controls">
+        <div class="control-buttons"><a class="add-btn" href=""><img src="assets/images/add-btn.svg"></a><a class="refresh-btn" href=""><img src="assets/images/refresh-btn.svg"></a></div>
+        <div class="search-form">
+          <form action="">
+            <input type="search" placeholder="Поиск">
+          </form>
+        </div>
+      </div>
+      <div class="left-tabs-headers"><a class="left-tabs__link-header active" data-page="5">подарки</a><a class="left-tabs__link-header" data-page="5">суперподарки</a><a class="left-tabs__link-header" data-page="5">цена            </a></div>
+      <div class="link-header-container active" data-page="5">
+        <table class="requests" cellspacing="0">
+          <thead class="requests-header">
+            <tr> 
+              <td>id</td>
+              <td>id компании</td>
+              <td>название подарка</td>
+              <td>дата создания</td>
+              <td>тип подарка                     </td>
+            </tr>
+          </thead>
+          <tbody class="requests-content">
+            <tr>
+              <td> <a class="requests-content__link" data-fancybox data-src="#modal-phone" data-options="{ &quot;touch&quot;: false }">123456789</a></td>
+              <td> </td>
+              <td> </td>
+              <td></td>
+              <td>                </td>
+            </tr>
+            <tr>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="link-header-container" data-page="5">
+        <table class="requests" cellspacing="0">
+          <thead class="requests-header">
+            <tr> 
+              <td>id</td>
+              <td>название</td>
+              <td>дата создания</td>
+              <td>дата окончания</td>
+              <td>количество                        </td>
+            </tr>
+          </thead>
+          <tbody class="requests-content">
+            <tr>
+              <td> <a class="requests-content__link" data-fancybox data-src="#modal-phone" data-options="{ &quot;touch&quot;: false }">123456789</a></td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td>                </td>
+            </tr>
+            <tr>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td></td>
+              <td> </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="link-header-container" data-page="5">
+        <table class="requests" cellspacing="0">
+          <thead class="requests-header">
+            <tr> 
+              <td>id</td>
+              <td>логин</td>
+              <td>параметр доступа</td>
+              <td>дата регистрации</td>
+              <td>последняя дата пользования                        </td>
+            </tr>
+          </thead>
+          <tbody class="requests-content">
+            <tr>
+              <td> <a class="requests-content__link" data-fancybox data-src="#modal-phone" data-options="{ &quot;touch&quot;: false }">123456789</a></td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td>                    </td>
+            </tr>
+            <tr>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="modal" id="modal-graph">
+      <div class="modal-graph-container">
+        <h1>Статистика граф</h1>
+      </div>
+    </div>
+    <div class="modal" id="modal-business-acc">
+      <div class="modal-business-acc-container">
+        <form class="business-acc-form modal-form">
+          <div class="left-form">
+            <div class="form-group__text">
+              <label for="business-name">Название компании<br>(не более 20 символов)</label>
+              <input type="text" id="business-name" name="business-name">
+            </div>
+            <div class="form-group__text">
+              <label for="business-full-name">Полное наименование<br>компании (ООО, ИП...)</label>
+              <input type="text" id="business-full-name" name="business-full-name">
+            </div>
+            <div class="form-group__text">
+              <label for="business-inn">ИНН</label>
+              <input type="text" id="business-inn" name="business-inn">
+            </div>
+            <div class="form-group__text">
+              <label for="business-ogrn">ОГРН</label>
+              <input type="text" id="business-ogrn" name="business-ogrn">
+            </div>
+            <div class="form-group__text">
+              <label for="business-adress">Юридический адрес</label>
+              <input type="text" id="business-adress" name="business-adress">
+            </div>
+          </div>
+          <div class="right-form">
+            <div class="form-group__text">
+              <label for="business-phone">Телефон</label>
+              <input type="text" id="business-phone" name="business-phone">
+            </div>
+            <div class="form-group__text textarea">
+              <label for="business-token">Токен</label>
+              <textarea id="business-token" name="business-token"></textarea>
+            </div>
+            <div class="form-group__text">
+              <label for="business-money">Деньги</label>
+              <input type="text" id="business-money" name="business-money">
+            </div>
+            <div class="form-group__text">
+              <label for="business-status">Статус</label>
+              <input type="text" id="business-status" name="business-status">
+            </div>
+          </div><a class="form-button button__delete"><span>Удалить аккаунт</span></a><a class="form-button button__accept"><span>Сохранить изменения</span></a>
+        </form>
+      </div>
+    </div>
+    <div class="modal" id="modal-account">
+      <div class="modal-account-container">
+        <form class="account-form modal-form">
+          <div class="left-form">
+            <div class="form-group__text">
+              <label for="acc-id">ID</label>
+              <input type="text" id="acc-id" name="acc-id">
+            </div>
+            <div class="form-group__text">
+              <label for="acc-rating">Баллы</label>
+              <input type="text" id="acc-rating" name="acc-rating">
+            </div>
+            <div class="form-group__text">
+              <label for="acc-email">E-mail</label>
+              <input type="text" id="acc-email" name="acc-email">
+            </div>
+            <div class="form-group__text textarea">
+              <label for="acc-token">Токен</label>
+              <textarea id="acc-token" name="acc-token">                   </textarea>
+            </div>
+          </div>
+          <div class="right-form">
+            <div class="form-group__text">
+              <label for="acc-rights">Право доступа</label>
+              <input type="text" id="acc-rights" name="acc-rights">
+            </div>
+            <div class="form-group__text">
+              <label for="acc-device">Устройство</label>
+              <input type="text" id="acc-device" name="acc-device">
+            </div>
+            <div class="form-group__text">
+              <label for="acc-approved">Подтвержден</label>
+              <input type="text" id="acc-approved" name="acc-approved">
+            </div>
+            <div class="form-group__text">
+              <label for="acc-reg-date">Дата создания</label>
+              <input type="text" id="acc-reg-date" name="acc-reg-date">
+            </div>
+            <div class="form-group__text">
+              <label for="acc-activity-time">Последняя активность</label>
+              <input type="text" id="acc-activity-time" name="acc-activity-time">
+            </div>
+          </div><a class="form-button button__delete"><span>Удалить аккаунт </span></a><a class="form-button button__accept"><span>Сохранить изменения</span></a>
+        </form>
+      </div>
+    </div>
+    <div id="modal-phone">
+      <div class="modal-phone-container">
+        <div class="modal-phone-info">
+          <p>ID</p>
+          <p>Username / Полное название компании</p>
+          <p>ФИО / Фактическое название компании</p>
+          <p>Телефон</p>
+          <p>E-mail</p>
+          <p>Временной интервал для созвона (10:00-18:00)</p><br>
+          <p>Тема сообщения</p>
+        </div>
+        <div class="modal-phone-links"><a class="requests-content__link blue">обращение от 01.01.2019</a><br><a class="requests-content__link blue">обращение от 05.10.2018</a><br><a class="requests-content__link blue">обращение от 10.12.2018</a><a class="requests-content__extend-link"><img src="assets/images/extend.svg"></a></div>
+        <div class="modal-phone-comment">
+          <textarea class="modal-phone-comment__textarea" placeholder="Комментарий оператора"></textarea>
+        </div>
+        <div class="modal-phone-buttons"><a class="modal-phone-buttons__delay"><span>Заявка отложена</span></a><a class="modal-phone-buttons__solve"><span>Проблема устранена</span></a></div>
+      </div>
+    </div>
+    <div id="modal-text">
+      <div class="modal-phone-container">
+        <div class="modal-phone-info">
+          <p>ID</p>
+          <p>Username / Полное название компании</p>
+          <p>ФИО / Фактическое название компании</p>
+          <p>Тема сообщения</p>
+          <p>Телефон</p>
+          <p>E-mail  </p>
+        </div>
+        <div class="modal-phone-comment">
+          <textarea class="modal-phone-comment__textarea modal-phone-comment-new" placeholder="Тело сообщения"></textarea>
+        </div>
+        <div class="modal-phone-images"><img src="assets/images/img-placeholder.png"><img src="assets/images/img-placeholder.png"><img src="assets/images/img-placeholder.png"><img src="assets/images/img-placeholder.png"><img src="assets/images/img-placeholder.png"></div>
+        <div class="modal-phone-links modal-phone-links-new"><a class="requests-content__link blue">обращение от 01.01.2019</a><br><a class="requests-content__link blue">обращение от 05.10.2018</a><br><a class="requests-content__link blue">обращение от 10.12.2018</a><a class="requests-content__extend-link"><img src="assets/images/extend.svg"></a></div>
+        <div class="modal-phone-comment">
+          <textarea class="modal-phone-comment__textarea" placeholder="Ответ оператора на сообщение"></textarea>
+        </div>
+        <div class="modal-phone-buttons modal-phone-buttons-new"><a class="modal-phone-buttons__delay"><span>Заявка отложена</span></a><a class="modal-phone-buttons__solve"><span>Проблема устранена</span></a></div>
+      </div>
+    </div>
+    <div id="modal-gift">
+      <div class="modal-gift-container">
+        <div class="modal-gift-info">
+          <div class="modal-gift-image"><img src="assets/images/gift-image.svg"></div>
+          <p>Название подарка</p>
+          <p>Описание подарка             </p>
+        </div>
+        <div class="modal-gift-checkboxes">
+          <input type="checkbox" id="problem1" name="problem1">
+          <label for="problem1">Несоответствие иконки товара</label><br>
+          <input type="checkbox" id="problem2" name="problem2">
+          <label for="problem2">Несоответствие названия товару</label><br>
+          <input type="checkbox" id="problem3" name="problem3">
+          <label for="problem3">Несоответствие подписи товару</label>
+        </div>
+        <div class="modal-gift-buttons"><a class="modal-gift-buttons__delay"><span>Нет</span></a><a class="modal-gift-buttons__solve"><span>Да</span></a></div>
+      </div>
+    </div>
+    <div id="modal-acc">
+      <div class="modal-acc-container">
+        <div class="modal-acc-box">
+          <div class="modal-acc-box-images"><img src="assets/images/photo1.png"></div>
+          <div class="modal-acc-box-radio">                   
+            <input class="radio-y" type="radio" id="yes1" name="block1">
+            <label for="yes1">Да                    </label>
+            <input type="radio" id="no1" name="block1">
+            <label for="no1">Нет                   </label>
+          </div>
+          <div class="modal-acc-box-images">                   <img src="assets/images/photo2.png"></div>
+          <div class="modal-acc-box-radio">                   
+            <input class="radio-y" type="radio" id="yes2" name="block2">
+            <label for="yes2">Да                                        </label>
+            <input type="radio" id="no2" name="block2">
+            <label for="no2">Нет                    </label>
+          </div>
+        </div>
+        <div class="modal-acc-box">
+          <div class="modal-acc-box-text">
+            <p class="modal-acc-box-text__subheader">Юридическое наименование</p>
+            <p class="modal-acc-box-text__header">Юридическое наименование                    </p>
+          </div>
+          <div class="modal-acc-box-radio">                   
+            <input class="radio-y" type="radio" id="yes3" name="block3">
+            <label for="yes3">Да                    </label>
+            <input type="radio" id="no3" name="block3">
+            <label for="no3">Нет</label>
+          </div>
+        </div>
+        <div class="modal-acc-box">
+          <div class="modal-acc-box-text">
+            <p class="modal-acc-box-text__subheader">Фактическое наименование</p>
+            <p class="modal-acc-box-text__header">Фактическое наименование                    </p>
+          </div>
+          <div class="modal-acc-box-radio">                   
+            <input class="radio-y" type="radio" id="yes4" name="block4">
+            <label for="yes4">Да                    </label>
+            <input type="radio" id="no4" name="block4">
+            <label for="no4">Нет</label>
+          </div>
+        </div>
+        <div class="modal-acc-box">
+          <div class="modal-acc-box-text">
+            <p class="modal-acc-box-text__subheader">ОГРН</p>
+            <p class="modal-acc-box-text__header">123456789123456                    </p>
+          </div>
+          <div class="modal-acc-box-radio">                   
+            <input class="radio-y" type="radio" id="yes5" name="block5">
+            <label for="yes5">Да                    </label>
+            <input type="radio" id="no5" name="block5">
+            <label for="no5">Нет</label>
+          </div>
+        </div>
+        <div class="modal-acc-box">
+          <div class="modal-acc-box-text">
+            <p class="modal-acc-box-text__subheader">ИНН</p>
+            <p class="modal-acc-box-text__header">123456789123456                    </p>
+          </div>
+          <div class="modal-acc-box-radio">                   
+            <input class="radio-y" type="radio" id="yes6" name="block6">
+            <label for="yes6">Да                    </label>
+            <input type="radio" id="no6" name="block6">
+            <label for="no6">Нет</label>
+          </div>
+        </div>
+        <div class="modal-acc-box">
+          <div class="modal-acc-box-text">
+            <p class="modal-acc-box-text__subheader">Телефон</p>
+            <p class="modal-acc-box-text__header">123456789123456                   </p>
+          </div>
+          <div class="modal-acc-box-radio">                   
+            <input class="radio-y" type="radio" id="yes7" name="block7">
+            <label for="yes7">Да                    </label>
+            <input type="radio" id="no7" name="block7">
+            <label for="no7">Нет</label>
+          </div>
+        </div>
+        <div class="modal-acc-box">
+          <div class="modal-acc-box-text">
+            <p class="modal-acc-box-text__subheader">Описание компании</p>
+            <p class="modal-acc-box-text__header">Таким образом рамки и место обучения кадров позволяет выполнять важные задания по разработке соответствующий условий активизации.                 </p>
+          </div>
+          <div class="modal-acc-box-radio">                   
+            <input class="radio-y" type="radio" id="yes8" name="block8">
+            <label for="yes8">Да                    </label>
+            <input type="radio" id="no8" name="block8">
+            <label for="no8">Нет</label>
+          </div>
+        </div>
+        <div class="modal-acc-buttons">               <a class="modal-acc-buttons__solve"><span>Да</span></a></div>
+      </div>
+    </div>
+  </body>
+</html>

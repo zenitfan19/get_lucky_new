@@ -1,0 +1,695 @@
+extends ../template
+
+block variables
+    - var title = 'Администратор'
+    - var admin = true;   
+
+block content
+    .main-container.active        
+        .right-controls
+            .control-buttons
+                a.add-btn(href="")
+                    img(src="assets/images/add-btn.svg")
+                a.refresh-btn(href="")
+                    img(src="assets/images/refresh-btn.svg")
+            .search-form
+                form(action="")
+                    input(type="search", placeholder="Поиск")       
+        .left-tabs-headers
+            a.left-tabs__link-header(data-page='1').active решенные
+            a.left-tabs__link-header(data-page='1') нерешенные
+            a.left-tabs__link-header(data-page='1') отложенные
+        .link-header-container(data-page='1').active
+            table.requests(cellspacing=0)
+                thead.requests-header
+                    tr 
+                        td #
+                        td id
+                        td принята
+                        td обработана
+                        td тема сообщения
+                        td текст / звонок
+                        td оператор
+                tbody.requests-content
+                    tr
+                        td 100500
+                        td 01123
+                        td 16.01.2019 / 11:30
+                        td 16.01.2019 / 11:43
+                        td технический
+                        td
+                            a.requests-content__link(data-fancybox data-src="#modal-phone" data-options='{ "touch": false }') звонок
+                        td
+                    tr
+                        td 100501
+                        td 01124
+                        td 15.01.2019 / 10:25
+                        td 16.01.2019 / 10:50
+                        td пожелания и предложения
+                        td
+                            a.requests-content__link(data-fancybox data-src="#modal-text" data-options='{ "touch": false }') текст
+                        td
+
+        .link-header-container(data-page='1')
+            table.requests(cellspacing=0)
+                thead.requests-header
+                    tr 
+                        td #
+                        td id
+                        td принята
+                        td обработана
+                        td тема сообщения
+                        td текст / звонок
+                        td оператор
+                tbody.requests-content
+                    tr
+                        td 100502
+                        td 01125
+                        td 17.02.2019 / 13:43
+                        td 17.02.2019 / 15:53
+                        td технический
+                        td
+                            a.requests-content__link(data-fancybox data-src="#modal-phone" data-options='{ "touch": false }') звонок
+                        td
+                    tr
+                        td 100503
+                        td 01126
+                        td 21.01.2019 / 09:25
+                        td 21.01.2019 / 10:50
+                        td пожелания и предложения
+                        td
+                            a.requests-content__link(data-fancybox data-src="#modal-text" data-options='{ "touch": false }') текст
+                        td
+
+        .link-header-container(data-page='1')
+            table.requests(cellspacing=0)
+                thead.requests-header
+                    tr 
+                        td #
+                        td id
+                        td принята
+                        td обработана
+                        td тема сообщения
+                        td текст / звонок
+                        td оператор
+                tbody.requests-content
+                    tr
+                        td 100504
+                        td 01127
+                        td 05.02.2019 / 17:12
+                        td 05.02.2019 / 17:17
+                        td технический
+                        td
+                            a.requests-content__link(data-fancybox data-src="#modal-phone" data-options='{ "touch": false }') звонок
+                        td
+                    tr
+                        td 100505
+                        td 01128
+                        td 06.02.2019 / 14:25
+                        td 06.02.2019 / 15:05
+                        td пожелания и предложения
+                        td
+                            a.requests-content__link(data-fancybox data-src="#modal-text" data-options='{ "touch": false }') текст
+                        td
+
+    .main-container       
+        .right-controls
+            .control-buttons
+                a.add-btn(href="")
+                    img(src="assets/images/add-btn.svg")
+                a.refresh-btn(href="")
+                    img(src="assets/images/refresh-btn.svg")
+            .search-form
+                form(action="")
+                    input(type="search", placeholder="Поиск")       
+        .left-tabs-headers
+            a.left-tabs__link-header(data-page='2').active бизнес-аккаунты
+            a.left-tabs__link-header(data-page='2') подарки
+        .left-tabs.link-header-container(data-page='2').active
+            a.left-tabs__link(data-page='2' data-header-link='1').active Прошли модерацию
+            a.left-tabs__link(data-page='2' data-header-link='1') Не прошли модерацию
+        .left-tabs.link-header-container(data-page='2')
+            a.left-tabs__link(data-page='2' data-header-link='2').active Прошли модерацию
+            a.left-tabs__link(data-page='2' data-header-link='2') Не прошли модерацию           
+        .link-container.active(data-page='2' data-header-link='1' data-link='1')
+            table.requests(cellspacing=0)
+                thead.requests-header
+                    tr 
+                        td #
+                        td id
+                        td название
+                        td адрес
+                        td телефон
+                        td модератор                        
+                tbody.requests-content
+                    tr
+                        td 100500
+                        td 01123
+                        td 
+                        td 
+                        td
+                        td                        
+                    tr
+                        td 100501
+                        td 01124
+                        td 
+                        td 
+                        td
+                        td  
+        .link-container(data-page='2' data-header-link='1' data-link='2')
+            table.requests(cellspacing=0)
+                thead.requests-header
+                    tr 
+                        td #
+                        td id
+                        td название
+                        td адрес
+                        td телефон
+                        td модератор
+                        td причина отказа                       
+                tbody.requests-content
+                    tr
+                        td 100500
+                        td 01123
+                        td 
+                        td 
+                        td
+                        td
+                        td                         
+                    tr
+                        td 100501
+                        td 01124
+                        td 
+                        td 
+                        td
+                        td
+                        td  
+
+        .left-tabs.link-container(data-page='2' data-header-link='2' data-link='1')
+            a.left-tabs__sublink(data-page='2' data-header-link='2' data-link='1' data-sublink='1').active Обычные
+            a.left-tabs__sublink(data-page='2' data-header-link='2' data-link='1' data-sublink='2') Таргетированные
+            a.left-tabs__sublink(data-page='2'  data-header-link='2' data-link='1' data-sublink='3') Супертаргетированные
+            a.left-tabs__sublink(data-page='2'  data-header-link='2' data-link='1' data-sublink='4') Прикрепленные
+
+        .left-tabs.link-container(data-page='2' data-header-link='2' data-link='2')
+            a.left-tabs__sublink(data-page='2' data-header-link='2' data-link='2' data-sublink='1').active Обычные
+            a.left-tabs__sublink(data-page='2' data-header-link='2' data-link='2' data-sublink='2') Таргетированные
+            a.left-tabs__sublink(data-page='2'  data-header-link='2' data-link='2' data-sublink='3') Супертаргетированные
+            a.left-tabs__sublink(data-page='2'  data-header-link='2' data-link='2' data-sublink='4') Прикрепленные
+
+        .link-subcontainer(data-page='2' data-header-link='2' data-link='1' data-sublink='1')
+            table.requests(cellspacing=0)
+                thead.requests-header
+                    tr 
+                        td # id
+                        td название
+                        td компания
+                        td модератор
+                        td категория
+                        td статус                       
+                tbody.requests-content
+                    tr
+                        td 1111
+                        td 
+                        td 
+                        td
+                        td
+                        td                         
+                    tr
+                        td 2222
+                        td 
+                        td 
+                        td
+                        td
+                        td  
+
+        .link-subcontainer(data-page='2' data-header-link='2' data-link='2' data-sublink='1')
+            table.requests(cellspacing=0)
+                thead.requests-header
+                    tr 
+                        td # id
+                        td название
+                        td компания
+                        td модератор
+                        td категория
+                        td причина отказа                       
+                tbody.requests-content
+                    tr
+                        td 3333
+                        td 
+                        td 
+                        td
+                        td
+                        td                         
+                    tr
+                        td 4444
+                        td 
+                        td 
+                        td
+                        td
+                        td
+
+
+    .main-container        
+        .right-controls
+            .control-buttons
+                a.add-btn(href="")
+                    img(src="assets/images/add-btn.svg")
+                a.refresh-btn(href="")
+                    img(src="assets/images/refresh-btn.svg")
+            .search-form
+                form(action="")
+                    input(type="search", placeholder="Поиск")
+        .requests
+            table.requests(cellspacing=0)
+                thead.requests-header
+                    tr 
+                        td id
+                        td название
+                        td адрес
+                        td телефон
+                        td дата регистрации
+                        td последняя дата пользования
+                tbody.requests-content
+                    tr
+                        td 
+                            a.requests-content__link(data-fancybox data-src="#modal-graph" data-options='{ "touch": false }') 123456789
+                        td 
+                        td 
+                        td 
+                        td                            
+                        td
+                    tr
+                        td 
+                        td 
+                        td 
+                        td 
+                        td                            
+                        td
+
+    .main-container        
+        .right-controls
+            .control-buttons
+                a.add-btn(href="")
+                    img(src="assets/images/add-btn.svg")
+                a.refresh-btn(href="")
+                    img(src="assets/images/refresh-btn.svg")
+            .search-form
+                form(action="")
+                    input(type="search", placeholder="Поиск")       
+        .left-tabs-headers
+            a.left-tabs__link-header(data-page='4').active бизнес-аккаунты
+            a.left-tabs__link-header(data-page='4') пользователи            
+        .link-header-container(data-page='4').active
+            table.requests(cellspacing=0)
+                thead.requests-header
+                    tr 
+                        td id организации
+                        td id компании
+                        td название организации
+                        td статус                        
+                tbody.requests-content
+                    tr
+                        td 
+                            a.requests-content__link(data-fancybox data-src="#modal-business-acc" data-options='{ "touch": false }') 123456789
+                        td 
+                        td 
+                        td                 
+                    tr
+                        td 
+                        td 
+                        td 
+                        td 
+                        
+
+        .link-header-container(data-page='4')
+            table.requests(cellspacing=0)
+                thead.requests-header
+                    tr 
+                        td id
+                        td логин
+                        td параметр доступа
+                        td дата регистрации
+                        td последняя дата пользования                        
+                tbody.requests-content
+                    tr
+                        td 
+                            a.requests-content__link(data-fancybox data-src="#modal-account" data-options='{ "touch": false }') 123456789
+                        td 
+                        td 
+                        td 
+                        td                     
+                    tr
+                        td 
+                        td 
+                        td 
+                        td 
+                        td 
+
+    .main-container        
+        .right-controls
+            .control-buttons
+                a.add-btn(href="")
+                    img(src="assets/images/add-btn.svg")
+                a.refresh-btn(href="")
+                    img(src="assets/images/refresh-btn.svg")
+            .search-form
+                form(action="")
+                    input(type="search", placeholder="Поиск")       
+        .left-tabs-headers
+            a.left-tabs__link-header(data-page='5').active подарки
+            a.left-tabs__link-header(data-page='5') суперподарки
+            a.left-tabs__link-header(data-page='5') цена            
+        .link-header-container(data-page='5').active
+            table.requests(cellspacing=0)
+                thead.requests-header
+                    tr 
+                        td id
+                        td id компании
+                        td название подарка
+                        td дата создания
+                        td тип подарка                     
+                tbody.requests-content
+                    tr
+                        td 
+                            a.requests-content__link(data-fancybox data-src="#modal-phone" data-options='{ "touch": false }') 123456789
+                        td 
+                        td 
+                        td
+                        td                 
+                    tr
+                        td 
+                        td 
+                        td 
+                        td 
+                        td
+
+        .link-header-container(data-page='5')
+            table.requests(cellspacing=0)
+                thead.requests-header
+                    tr 
+                        td id
+                        td название
+                        td дата создания
+                        td дата окончания
+                        td количество                        
+                tbody.requests-content
+                    tr
+                        td 
+                            a.requests-content__link(data-fancybox data-src="#modal-phone" data-options='{ "touch": false }') 123456789
+                        td 
+                        td 
+                        td 
+                        td                 
+                    tr
+                        td 
+                        td 
+                        td 
+                        td
+                        td  
+                        
+
+        .link-header-container(data-page='5')
+            table.requests(cellspacing=0)
+                thead.requests-header
+                    tr 
+                        td id
+                        td логин
+                        td параметр доступа
+                        td дата регистрации
+                        td последняя дата пользования                        
+                tbody.requests-content
+                    tr
+                        td 
+                            a.requests-content__link(data-fancybox data-src="#modal-phone" data-options='{ "touch": false }') 123456789
+                        td 
+                        td 
+                        td 
+                        td                     
+                    tr
+                        td 
+                        td 
+                        td 
+                        td 
+                        td 
+
+
+
+
+
+
+    #modal-graph.modal
+        .modal-graph-container
+            h1 Статистика граф
+
+    #modal-business-acc.modal
+        .modal-business-acc-container
+            form.business-acc-form.modal-form
+                .left-form
+                    div.form-group__text
+                        label(for="business-name") Название компании<br>(не более 20 символов)
+                        input(type="text", id="business-name", name="business-name")
+                    div.form-group__text
+                        label(for="business-full-name") Полное наименование<br>компании (ООО, ИП...)
+                        input(type="text", id="business-full-name", name="business-full-name")
+                    div.form-group__text
+                        label(for="business-inn") ИНН
+                        input(type="text", id="business-inn", name="business-inn")
+                    div.form-group__text
+                        label(for="business-ogrn") ОГРН
+                        input(type="text", id="business-ogrn", name="business-ogrn")
+                    div.form-group__text
+                        label(for="business-adress") Юридический адрес
+                        input(type="text", id="business-adress", name="business-adress")
+                                       
+
+                .right-form
+                    div.form-group__text
+                        label(for="business-phone") Телефон
+                        input(type="text", id="business-phone", name="business-phone")
+                    div.form-group__text.textarea
+                        label(for="business-token") Токен
+                        textarea(id="business-token", name="business-token")
+                    div.form-group__text
+                        label(for="business-money") Деньги
+                        input(type="text", id="business-money", name="business-money")
+                    div.form-group__text
+                        label(for="business-status") Статус
+                        input(type="text", id="business-status", name="business-status")
+                    
+                a.form-button.button__delete
+                    span Удалить аккаунт
+                a.form-button.button__accept
+                    span Сохранить изменения
+
+    #modal-account.modal
+        .modal-account-container
+            form.account-form.modal-form
+                .left-form
+                    div.form-group__text
+                        label(for="acc-id") ID
+                        input(type="text", id="acc-id", name="acc-id")
+                    div.form-group__text
+                        label(for="acc-rating") Баллы
+                        input(type="text", id="acc-rating", name="acc-rating")
+                    div.form-group__text
+                        label(for="acc-email") E-mail
+                        input(type="text", id="acc-email", name="acc-email")
+                    div.form-group__text.textarea
+                        label(for="acc-token") Токен
+                        textarea(id="acc-token", name="acc-token")                    
+                                  
+
+                .right-form
+                    div.form-group__text
+                        label(for="acc-rights") Право доступа
+                        input(type="text", id="acc-rights", name="acc-rights")
+                    div.form-group__text
+                        label(for="acc-device") Устройство
+                        input(type="text", id="acc-device", name="acc-device")
+                    div.form-group__text
+                        label(for="acc-approved") Подтвержден
+                        input(type="text", id="acc-approved", name="acc-approved")
+                    div.form-group__text
+                        label(for="acc-reg-date") Дата создания
+                        input(type="text", id="acc-reg-date", name="acc-reg-date")
+                    div.form-group__text
+                        label(for="acc-activity-time") Последняя активность
+                        input(type="text", id="acc-activity-time", name="acc-activity-time")
+                a.form-button.button__delete
+                    span Удалить аккаунт 
+                a.form-button.button__accept
+                    span Сохранить изменения
+
+
+
+    #modal-phone
+        .modal-phone-container
+            .modal-phone-info
+                p ID
+                p Username / Полное название компании
+                p ФИО / Фактическое название компании
+                p Телефон
+                p E-mail
+                p Временной интервал для созвона (10:00-18:00)
+                br
+                p Тема сообщения
+            
+            .modal-phone-links
+                a.requests-content__link.blue обращение от 01.01.2019
+                br
+                a.requests-content__link.blue обращение от 05.10.2018
+                br
+                a.requests-content__link.blue обращение от 10.12.2018
+                a.requests-content__extend-link
+                    img(src="assets/images/extend.svg")
+            .modal-phone-comment
+                textarea.modal-phone-comment__textarea(placeholder="Комментарий оператора")
+            .modal-phone-buttons
+                a.modal-phone-buttons__delay
+                    span Заявка отложена
+                a.modal-phone-buttons__solve
+                    span Проблема устранена
+
+    #modal-text
+        .modal-phone-container
+            .modal-phone-info
+                p ID
+                p Username / Полное название компании
+                p ФИО / Фактическое название компании
+                p Тема сообщения
+                p Телефон
+                p E-mail  
+
+            .modal-phone-comment
+                textarea.modal-phone-comment__textarea.modal-phone-comment-new(placeholder="Тело сообщения")
+
+            .modal-phone-images
+                img(src="assets/images/img-placeholder.png")
+                img(src="assets/images/img-placeholder.png")
+                img(src="assets/images/img-placeholder.png")
+                img(src="assets/images/img-placeholder.png")
+                img(src="assets/images/img-placeholder.png")
+
+            .modal-phone-links.modal-phone-links-new
+                a.requests-content__link.blue обращение от 01.01.2019
+                br
+                a.requests-content__link.blue обращение от 05.10.2018
+                br
+                a.requests-content__link.blue обращение от 10.12.2018
+                a.requests-content__extend-link
+                    img(src="assets/images/extend.svg")
+            .modal-phone-comment
+                textarea.modal-phone-comment__textarea(placeholder="Ответ оператора на сообщение")
+            .modal-phone-buttons.modal-phone-buttons-new
+                a.modal-phone-buttons__delay
+                    span Заявка отложена
+                a.modal-phone-buttons__solve
+                    span Проблема устранена
+    
+    #modal-gift
+        .modal-gift-container
+            .modal-gift-info
+                .modal-gift-image
+                    img(src="assets/images/gift-image.svg")
+                p Название подарка
+                p Описание подарка             
+            
+            .modal-gift-checkboxes
+                input(type="checkbox" id="problem1" name="problem1")
+                label(for="problem1") Несоответствие иконки товара
+                br                  
+                input(type="checkbox" id="problem2" name="problem2")
+                label(for="problem2") Несоответствие названия товару
+                br                   
+                input(type="checkbox" id="problem3" name="problem3")
+                label(for="problem3") Несоответствие подписи товару
+                    
+                            
+            .modal-gift-buttons
+                a.modal-gift-buttons__delay
+                    span Нет
+                a.modal-gift-buttons__solve
+                    span Да
+
+    #modal-acc
+        .modal-acc-container
+            .modal-acc-box
+                .modal-acc-box-images
+                    img(src="assets/images/photo1.png")                    
+                .modal-acc-box-radio                    
+                    input.radio-y(type="radio" id="yes1" name="block1")
+                    label(for="yes1") Да                    
+                    input(type="radio" id="no1" name="block1")
+                    label(for="no1") Нет                   
+                .modal-acc-box-images                    
+                    img(src="assets/images/photo2.png")
+                .modal-acc-box-radio                    
+                    input.radio-y(type="radio" id="yes2" name="block2")
+                    label(for="yes2") Да                                        
+                    input(type="radio" id="no2" name="block2")
+                    label(for="no2") Нет                    
+            .modal-acc-box
+                .modal-acc-box-text
+                    p.modal-acc-box-text__subheader Юридическое наименование
+                    p.modal-acc-box-text__header Юридическое наименование                    
+                .modal-acc-box-radio                    
+                    input.radio-y(type="radio" id="yes3" name="block3")
+                    label(for="yes3") Да                    
+                    input(type="radio" id="no3" name="block3")
+                    label(for="no3") Нет
+                    
+            .modal-acc-box
+                .modal-acc-box-text
+                    p.modal-acc-box-text__subheader Фактическое наименование
+                    p.modal-acc-box-text__header Фактическое наименование                    
+                .modal-acc-box-radio                    
+                    input.radio-y(type="radio" id="yes4" name="block4")
+                    label(for="yes4") Да                    
+                    input(type="radio" id="no4" name="block4")
+                    label(for="no4") Нет
+                    
+            .modal-acc-box
+                .modal-acc-box-text
+                    p.modal-acc-box-text__subheader ОГРН
+                    p.modal-acc-box-text__header 123456789123456                    
+                .modal-acc-box-radio                    
+                    input.radio-y(type="radio" id="yes5" name="block5")
+                    label(for="yes5") Да                    
+                    input(type="radio" id="no5" name="block5")
+                    label(for="no5") Нет
+                    
+            .modal-acc-box
+                .modal-acc-box-text
+                    p.modal-acc-box-text__subheader ИНН
+                    p.modal-acc-box-text__header 123456789123456                    
+                .modal-acc-box-radio                    
+                    input.radio-y(type="radio" id="yes6" name="block6")
+                    label(for="yes6") Да                    
+                    input(type="radio" id="no6" name="block6")
+                    label(for="no6") Нет
+                    
+            .modal-acc-box
+                .modal-acc-box-text
+                    p.modal-acc-box-text__subheader Телефон
+                    p.modal-acc-box-text__header 123456789123456                   
+                .modal-acc-box-radio                    
+                    input.radio-y(type="radio" id="yes7" name="block7")
+                    label(for="yes7") Да                    
+                    input(type="radio" id="no7" name="block7")
+                    label(for="no7") Нет
+                    
+            .modal-acc-box
+                .modal-acc-box-text
+                    p.modal-acc-box-text__subheader Описание компании
+                    p.modal-acc-box-text__header Таким образом рамки и место обучения кадров позволяет выполнять важные задания по разработке соответствующий условий активизации.                 
+                .modal-acc-box-radio                    
+                    input.radio-y(type="radio" id="yes8" name="block8")
+                    label(for="yes8") Да                    
+                    input(type="radio" id="no8" name="block8")
+                    label(for="no8") Нет
+                    
+                            
+            .modal-acc-buttons                
+                a.modal-acc-buttons__solve
+                    span Да
