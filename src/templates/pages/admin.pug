@@ -372,7 +372,7 @@ block content
                 tbody.requests-content
                     tr
                         td 
-                            a.requests-content__link(data-fancybox data-src="#modal-phone" data-options='{ "touch": false }') 123456789
+                            a.requests-content__link(data-fancybox data-src="#modal-gift-admin" data-options='{ "touch": false }') 123456789
                         td 
                         td 
                         td
@@ -396,7 +396,7 @@ block content
                 tbody.requests-content
                     tr
                         td 
-                            a.requests-content__link(data-fancybox data-src="#modal-phone" data-options='{ "touch": false }') 123456789
+                            a.requests-content__link(data-fancybox data-src="#modal-supergift-admin" data-options='{ "touch": false }') 123456789
                         td 
                         td 
                         td 
@@ -410,28 +410,137 @@ block content
                         
 
         .link-header-container(data-page='5')
-            table.requests(cellspacing=0)
-                thead.requests-header
-                    tr 
-                        td id
-                        td логин
-                        td параметр доступа
-                        td дата регистрации
-                        td последняя дата пользования                        
-                tbody.requests-content
-                    tr
-                        td 
-                            a.requests-content__link(data-fancybox data-src="#modal-phone" data-options='{ "touch": false }') 123456789
-                        td 
-                        td 
-                        td 
-                        td                     
-                    tr
-                        td 
-                        td 
-                        td 
-                        td 
-                        td 
+            .gift-price-container
+                .title-search
+                    .country-label Россия                        
+                    .search-form
+                        form(action="")
+                            input(type="search", placeholder="Выбор страны")
+                form.gift-form.modal-form.price-form
+                    .left-form
+                        div.form-group__text
+                            label(for="gift-price-common") Общий
+                            input(type="text", id="gift-price-common", name="gift-price-common")
+                        div.form-group__text
+                            label(for="gift-price-targeted") Таргетированный
+                            input(type="text", id="gift-price-targeted", name="gift-price-targeted")
+                        div.form-group__text
+                            label(for="gift-price-supertargeted") Супертаргетированный
+                            input(type="text", id="gift-price-supertargeted", name="gift-price-supertargeted")
+                        div.form-group__text
+                            label(for="gift-price-smartphone") Закрепленный<br>за смартфоном
+                            input(type="text", id="gift-price-smartphone", name="gift-price-smartphone")
+                    .right-form
+                        div.form-group__text
+                            label(for="gift-price-common") Общий
+                            input(type="text", id="gift-price-common", name="gift-price-common")
+                        div.form-group__text
+                            label(for="gift-price-targeted") Таргетированный
+                            input(type="text", id="gift-price-targeted", name="gift-price-targeted")
+                        div.form-group__text
+                            label(for="gift-price-supertargeted") Супертаргетированный
+                            input(type="text", id="gift-price-supertargeted", name="gift-price-supertargeted")
+                        div.form-group__text
+                            label(for="gift-price-smartphone") Закрепленный<br>за смартфоном
+                            input(type="text", id="gift-price-smartphone", name="gift-price-smartphone")                        
+                    
+                    a.form-button.button__save
+                        span Сохранить
+                    a.form-button.button__accept
+                        span Добавить
+                    a.form-button.button__delete
+                        span Удалить 
+
+
+    .main-container        
+        .picture-container            
+            .left-block
+                .left-block-contant
+                    .left-panel
+                        .supergift-image
+                            span Изображение категории
+                            img(src="assets/images/category-img.png")
+                            a Изменить изображение                        
+                    .right-panel
+                        div.title-input
+                            span Название категории
+                            input(type="text", id="gift-price-common", name="gift-price-common" value='АВТО')
+                        div.picture-table
+                            img.add-icon(src="assets/images/add-icon.svg")
+                            img.delete-icon(src="assets/images/delete-icon.svg")
+                            span Иконки
+                            table.table-icons(cellspacing=0)
+                                thead
+                                    tr 
+                                        td 800X800
+                                        td 200x200                                                                
+                                tbody
+                                    tr
+                                        td auto.png
+                                        td auto.png                
+                                    tr
+                                        td carwash.png
+                                        td carwash.png
+                                    tr
+                                        td repair.png
+                                        td repair.png
+                                    tr
+                                        td wheel.png
+                                        td wheel.png 
+                                    tr
+                                        td 
+                                        td
+                                    tr
+                                        td 
+                                        td
+                                    tr
+                                        td 
+                                        td
+                                    tr
+                                        td 
+                                        td
+                                    tr
+                                        td 
+                                        td
+                                    tr
+                                        td 
+                                        td
+                            
+                .left-block-buttons
+                    a.form-button.button__delete
+                        span Удалить
+                    a.form-button.button__save
+                        span Сохранить
+                    
+            .right-block
+                a.category-name.active 
+                    span авто
+                a.category-name 
+                    span еда
+                a.category-name 
+                    span красота и здоровье
+                a.category-name 
+                    span напитки
+                a.category-name 
+                    span одежда и обувь
+                a.category-name 
+                    span путешествие и отдых
+                a.category-name 
+                    span развлечения
+                a.category-name 
+                    span спорт
+                a.category-name 
+                    span техника
+                a.category-name 
+                    span услуги                        
+                a.form-button.button__accept
+                    span Добавить
+            
+            
+             
+                    
+            
+                
 
 
 
@@ -521,175 +630,95 @@ block content
                 a.form-button.button__accept
                     span Сохранить изменения
 
+    #modal-gift-admin.modal
+        .modal-gift-admin-container
+            form.gift-form.modal-form
+                .left-form
+                    div.form-group__text
+                        label(for="gift-id") ID подарка
+                        input(type="text", id="gift-id", name="gift-id")
+                    div.form-group__text
+                        label(for="gift-organization-id") ID организации
+                        input(type="text", id="gift-organization-id", name="gift-organization-id")
+                    div.form-group__text
+                        label(for="gift-type") Тип подарка
+                        input(type="text", id="gift-type", name="gift-type")
+                    div.form-group__text
+                        label(for="gift-name") Название
+                        input(type="text", id="gift-name", name="gift-name")
+                    div.form-group__text.textarea
+                        label(for="gift-description") Описание
+                        textarea(id="gift-description", name="gift-description")
+                    div.form-group__text
+                        label(for="gift-number") Количество<br>подарков 
+                        input(type="text", id="gift-number", name="gift-number")
+                                  
 
+                .right-form
+                    div.form-group__text
+                        label(for="gift-offer-period") Сроки акции
+                        input(type="text", id="gift-offer-period", name="gift-offer-period")
+                    div.form-group__text
+                        label(for="gift-creation-date") Дата создания
+                        input(type="text", id="gift-creation-date", name="gift-creation-date")
+                    div.form-group__text
+                        label(for="gift-collection-date") Дата сбора
+                        input(type="text", id="gift-collection-date", name="gift-collection-date")
+                    div.form-group__text
+                        label(for="gift-recieving-date") Дата получения
+                        input(type="text", id="gift-recieving-date", name="gift-recieving-date")
+                    div.form-group__text
+                        label(for="acc-status") Статус
+                        input(type="text", id="acc-status", name="acc-status")
+                    div.form-group__text
+                        label(for="gift-activity") Активность
+                        input(type="text", id="gift-activity", name="gift-activity")
+                a.form-button.button__delete
+                    span Отмена 
+                a.form-button.button__accept
+                    span Сохранить изменения
 
-    #modal-phone
-        .modal-phone-container
-            .modal-phone-info
-                p ID
-                p Username / Полное название компании
-                p ФИО / Фактическое название компании
-                p Телефон
-                p E-mail
-                p Временной интервал для созвона (10:00-18:00)
-                br
-                p Тема сообщения
-            
-            .modal-phone-links
-                a.requests-content__link.blue обращение от 01.01.2019
-                br
-                a.requests-content__link.blue обращение от 05.10.2018
-                br
-                a.requests-content__link.blue обращение от 10.12.2018
-                a.requests-content__extend-link
-                    img(src="assets/images/extend.svg")
-            .modal-phone-comment
-                textarea.modal-phone-comment__textarea(placeholder="Комментарий оператора")
-            .modal-phone-buttons
-                a.modal-phone-buttons__delay
-                    span Заявка отложена
-                a.modal-phone-buttons__solve
-                    span Проблема устранена
+    #modal-supergift-admin.modal
+        .modal-supergift-admin-container
+            .supergift-image
+                img(src="assets/images/supergift-img.svg")
+                a Добавить изображение
+            form.gift-form.modal-form
+                .left-form
+                    div.form-group__text
+                        label(for="supergift-name") Название
+                        input(type="text", id="supergift-name", name="supergift-name")
+                    div.form-group__text
+                        label(for="supergift-organization-name") Имя организации
+                        input(type="text", id="supergift-organization-name", name="supergift-organization-name")
+                    div.form-group__text
+                        label(for="supergift-number") Количество
+                        input(type="text", id="supergift-number", name="supergift-number")
+                    div.form-group__text
+                        label(for="supergift-city") Город
+                        input(type="text", id="supergift-city", name="supergift-city")
+                    div.form-group__text
+                        label(for="supergift-adress") Адрес
+                        input(type="text", id="supergift-adress", name="supergift-adress")                  
+                                  
 
-    #modal-text
-        .modal-phone-container
-            .modal-phone-info
-                p ID
-                p Username / Полное название компании
-                p ФИО / Фактическое название компании
-                p Тема сообщения
-                p Телефон
-                p E-mail  
-
-            .modal-phone-comment
-                textarea.modal-phone-comment__textarea.modal-phone-comment-new(placeholder="Тело сообщения")
-
-            .modal-phone-images
-                img(src="assets/images/img-placeholder.png")
-                img(src="assets/images/img-placeholder.png")
-                img(src="assets/images/img-placeholder.png")
-                img(src="assets/images/img-placeholder.png")
-                img(src="assets/images/img-placeholder.png")
-
-            .modal-phone-links.modal-phone-links-new
-                a.requests-content__link.blue обращение от 01.01.2019
-                br
-                a.requests-content__link.blue обращение от 05.10.2018
-                br
-                a.requests-content__link.blue обращение от 10.12.2018
-                a.requests-content__extend-link
-                    img(src="assets/images/extend.svg")
-            .modal-phone-comment
-                textarea.modal-phone-comment__textarea(placeholder="Ответ оператора на сообщение")
-            .modal-phone-buttons.modal-phone-buttons-new
-                a.modal-phone-buttons__delay
-                    span Заявка отложена
-                a.modal-phone-buttons__solve
-                    span Проблема устранена
-    
-    #modal-gift
-        .modal-gift-container
-            .modal-gift-info
-                .modal-gift-image
-                    img(src="assets/images/gift-image.svg")
-                p Название подарка
-                p Описание подарка             
-            
-            .modal-gift-checkboxes
-                input(type="checkbox" id="problem1" name="problem1")
-                label(for="problem1") Несоответствие иконки товара
-                br                  
-                input(type="checkbox" id="problem2" name="problem2")
-                label(for="problem2") Несоответствие названия товару
-                br                   
-                input(type="checkbox" id="problem3" name="problem3")
-                label(for="problem3") Несоответствие подписи товару
-                    
-                            
-            .modal-gift-buttons
-                a.modal-gift-buttons__delay
-                    span Нет
-                a.modal-gift-buttons__solve
-                    span Да
-
-    #modal-acc
-        .modal-acc-container
-            .modal-acc-box
-                .modal-acc-box-images
-                    img(src="assets/images/photo1.png")                    
-                .modal-acc-box-radio                    
-                    input.radio-y(type="radio" id="yes1" name="block1")
-                    label(for="yes1") Да                    
-                    input(type="radio" id="no1" name="block1")
-                    label(for="no1") Нет                   
-                .modal-acc-box-images                    
-                    img(src="assets/images/photo2.png")
-                .modal-acc-box-radio                    
-                    input.radio-y(type="radio" id="yes2" name="block2")
-                    label(for="yes2") Да                                        
-                    input(type="radio" id="no2" name="block2")
-                    label(for="no2") Нет                    
-            .modal-acc-box
-                .modal-acc-box-text
-                    p.modal-acc-box-text__subheader Юридическое наименование
-                    p.modal-acc-box-text__header Юридическое наименование                    
-                .modal-acc-box-radio                    
-                    input.radio-y(type="radio" id="yes3" name="block3")
-                    label(for="yes3") Да                    
-                    input(type="radio" id="no3" name="block3")
-                    label(for="no3") Нет
-                    
-            .modal-acc-box
-                .modal-acc-box-text
-                    p.modal-acc-box-text__subheader Фактическое наименование
-                    p.modal-acc-box-text__header Фактическое наименование                    
-                .modal-acc-box-radio                    
-                    input.radio-y(type="radio" id="yes4" name="block4")
-                    label(for="yes4") Да                    
-                    input(type="radio" id="no4" name="block4")
-                    label(for="no4") Нет
-                    
-            .modal-acc-box
-                .modal-acc-box-text
-                    p.modal-acc-box-text__subheader ОГРН
-                    p.modal-acc-box-text__header 123456789123456                    
-                .modal-acc-box-radio                    
-                    input.radio-y(type="radio" id="yes5" name="block5")
-                    label(for="yes5") Да                    
-                    input(type="radio" id="no5" name="block5")
-                    label(for="no5") Нет
-                    
-            .modal-acc-box
-                .modal-acc-box-text
-                    p.modal-acc-box-text__subheader ИНН
-                    p.modal-acc-box-text__header 123456789123456                    
-                .modal-acc-box-radio                    
-                    input.radio-y(type="radio" id="yes6" name="block6")
-                    label(for="yes6") Да                    
-                    input(type="radio" id="no6" name="block6")
-                    label(for="no6") Нет
-                    
-            .modal-acc-box
-                .modal-acc-box-text
-                    p.modal-acc-box-text__subheader Телефон
-                    p.modal-acc-box-text__header 123456789123456                   
-                .modal-acc-box-radio                    
-                    input.radio-y(type="radio" id="yes7" name="block7")
-                    label(for="yes7") Да                    
-                    input(type="radio" id="no7" name="block7")
-                    label(for="no7") Нет
-                    
-            .modal-acc-box
-                .modal-acc-box-text
-                    p.modal-acc-box-text__subheader Описание компании
-                    p.modal-acc-box-text__header Таким образом рамки и место обучения кадров позволяет выполнять важные задания по разработке соответствующий условий активизации.                 
-                .modal-acc-box-radio                    
-                    input.radio-y(type="radio" id="yes8" name="block8")
-                    label(for="yes8") Да                    
-                    input(type="radio" id="no8" name="block8")
-                    label(for="no8") Нет
-                    
-                            
-            .modal-acc-buttons                
-                a.modal-acc-buttons__solve
-                    span Да
+                .right-form
+                    div.form-group__text
+                        label(for="supergift-price") Цена
+                        input(type="text", id="supergift-price", name="supergift-price")
+                    div.form-group__text
+                        label(for="supergift-creation-date") Дата создания
+                        input(type="text", id="supergift-creation-date", name="supergift-creation-date")
+                    div.form-group__text
+                        label(for="supergift-ending-date") Дата окончания
+                        input(type="text", id="supergift-ending-date", name="supergift-ending-date")
+                    div.form-group__radio                        
+                        input(type="radio", id="supergift-available", name="supergift-isavailable")
+                        label(for="supergift-available") Доступен                                            
+                        input(type="radio", id="supergift-not-available", name="supergift-isavailable")
+                        label(for="supergift-not-available") Не доступен
+                   
+                a.form-button.button__delete
+                    span Отмена 
+                a.form-button.button__accept
+                    span Сохранить изменения    

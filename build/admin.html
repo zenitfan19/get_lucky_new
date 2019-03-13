@@ -414,7 +414,7 @@
           </thead>
           <tbody class="requests-content">
             <tr>
-              <td> <a class="requests-content__link" data-fancybox data-src="#modal-phone" data-options="{ &quot;touch&quot;: false }">123456789</a></td>
+              <td> <a class="requests-content__link" data-fancybox data-src="#modal-gift-admin" data-options="{ &quot;touch&quot;: false }">123456789</a></td>
               <td> </td>
               <td> </td>
               <td></td>
@@ -443,7 +443,7 @@
           </thead>
           <tbody class="requests-content">
             <tr>
-              <td> <a class="requests-content__link" data-fancybox data-src="#modal-phone" data-options="{ &quot;touch&quot;: false }">123456789</a></td>
+              <td> <a class="requests-content__link" data-fancybox data-src="#modal-supergift-admin" data-options="{ &quot;touch&quot;: false }">123456789</a></td>
               <td> </td>
               <td> </td>
               <td> </td>
@@ -460,33 +460,124 @@
         </table>
       </div>
       <div class="link-header-container" data-page="5">
-        <table class="requests" cellspacing="0">
-          <thead class="requests-header">
-            <tr> 
-              <td>id</td>
-              <td>логин</td>
-              <td>параметр доступа</td>
-              <td>дата регистрации</td>
-              <td>последняя дата пользования                        </td>
-            </tr>
-          </thead>
-          <tbody class="requests-content">
-            <tr>
-              <td> <a class="requests-content__link" data-fancybox data-src="#modal-phone" data-options="{ &quot;touch&quot;: false }">123456789</a></td>
-              <td> </td>
-              <td> </td>
-              <td> </td>
-              <td>                    </td>
-            </tr>
-            <tr>
-              <td> </td>
-              <td> </td>
-              <td> </td>
-              <td> </td>
-              <td> </td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="gift-price-container">
+          <div class="title-search">
+            <div class="country-label">Россия                        </div>
+            <div class="search-form">
+              <form action="">
+                <input type="search" placeholder="Выбор страны">
+              </form>
+            </div>
+          </div>
+          <form class="gift-form modal-form price-form">
+            <div class="left-form">
+              <div class="form-group__text">
+                <label for="gift-price-common">Общий</label>
+                <input type="text" id="gift-price-common" name="gift-price-common">
+              </div>
+              <div class="form-group__text">
+                <label for="gift-price-targeted">Таргетированный</label>
+                <input type="text" id="gift-price-targeted" name="gift-price-targeted">
+              </div>
+              <div class="form-group__text">
+                <label for="gift-price-supertargeted">Супертаргетированный</label>
+                <input type="text" id="gift-price-supertargeted" name="gift-price-supertargeted">
+              </div>
+              <div class="form-group__text">
+                <label for="gift-price-smartphone">Закрепленный<br>за смартфоном</label>
+                <input type="text" id="gift-price-smartphone" name="gift-price-smartphone">
+              </div>
+            </div>
+            <div class="right-form">
+              <div class="form-group__text">
+                <label for="gift-price-common">Общий</label>
+                <input type="text" id="gift-price-common" name="gift-price-common">
+              </div>
+              <div class="form-group__text">
+                <label for="gift-price-targeted">Таргетированный</label>
+                <input type="text" id="gift-price-targeted" name="gift-price-targeted">
+              </div>
+              <div class="form-group__text">
+                <label for="gift-price-supertargeted">Супертаргетированный</label>
+                <input type="text" id="gift-price-supertargeted" name="gift-price-supertargeted">
+              </div>
+              <div class="form-group__text">
+                <label for="gift-price-smartphone">Закрепленный<br>за смартфоном</label>
+                <input type="text" id="gift-price-smartphone" name="gift-price-smartphone">
+              </div>
+            </div><a class="form-button button__save"><span>Сохранить</span></a><a class="form-button button__accept"><span>Добавить</span></a><a class="form-button button__delete"><span>Удалить </span></a>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="main-container">       
+      <div class="picture-container">           
+        <div class="left-block">
+          <div class="left-block-contant">
+            <div class="left-panel">
+              <div class="supergift-image"><span>Изображение категории</span><img src="assets/images/category-img.png"><a>Изменить изображение                        </a></div>
+            </div>
+            <div class="right-panel">
+              <div class="title-input"><span>Название категории</span>
+                <input type="text" id="gift-price-common" name="gift-price-common" value="АВТО">
+              </div>
+              <div class="picture-table"><img class="add-icon" src="assets/images/add-icon.svg"><img class="delete-icon" src="assets/images/delete-icon.svg"><span>Иконки</span>
+                <table class="table-icons" cellspacing="0">
+                  <thead>
+                    <tr> 
+                      <td>800X800</td>
+                      <td>200x200                                                                </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>auto.png</td>
+                      <td>auto.png                </td>
+                    </tr>
+                    <tr>
+                      <td>carwash.png</td>
+                      <td>carwash.png</td>
+                    </tr>
+                    <tr>
+                      <td>repair.png</td>
+                      <td>repair.png</td>
+                    </tr>
+                    <tr>
+                      <td>wheel.png</td>
+                      <td>wheel.png </td>
+                    </tr>
+                    <tr>
+                      <td> </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td> </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td> </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td> </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td> </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td> </td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="left-block-buttons"><a class="form-button button__delete"><span>Удалить</span></a><a class="form-button button__save"><span>Сохранить</span></a></div>
+        </div>
+        <div class="right-block"><a class="category-name active"> <span>авто</span></a><a class="category-name"> <span>еда</span></a><a class="category-name"> <span>красота и здоровье</span></a><a class="category-name"> <span>напитки</span></a><a class="category-name"> <span>одежда и обувь</span></a><a class="category-name"> <span>путешествие и отдых</span></a><a class="category-name"> <span>развлечения</span></a><a class="category-name"> <span>спорт</span></a><a class="category-name"> <span>техника</span></a><a class="category-name"> <span>услуги                        </span></a><a class="form-button button__accept"><span>Добавить</span></a></div>
       </div>
     </div>
     <div class="modal" id="modal-graph">
@@ -586,154 +677,111 @@
         </form>
       </div>
     </div>
-    <div id="modal-phone">
-      <div class="modal-phone-container">
-        <div class="modal-phone-info">
-          <p>ID</p>
-          <p>Username / Полное название компании</p>
-          <p>ФИО / Фактическое название компании</p>
-          <p>Телефон</p>
-          <p>E-mail</p>
-          <p>Временной интервал для созвона (10:00-18:00)</p><br>
-          <p>Тема сообщения</p>
-        </div>
-        <div class="modal-phone-links"><a class="requests-content__link blue">обращение от 01.01.2019</a><br><a class="requests-content__link blue">обращение от 05.10.2018</a><br><a class="requests-content__link blue">обращение от 10.12.2018</a><a class="requests-content__extend-link"><img src="assets/images/extend.svg"></a></div>
-        <div class="modal-phone-comment">
-          <textarea class="modal-phone-comment__textarea" placeholder="Комментарий оператора"></textarea>
-        </div>
-        <div class="modal-phone-buttons"><a class="modal-phone-buttons__delay"><span>Заявка отложена</span></a><a class="modal-phone-buttons__solve"><span>Проблема устранена</span></a></div>
+    <div class="modal" id="modal-gift-admin">
+      <div class="modal-gift-admin-container">
+        <form class="gift-form modal-form">
+          <div class="left-form">
+            <div class="form-group__text">
+              <label for="gift-id">ID подарка</label>
+              <input type="text" id="gift-id" name="gift-id">
+            </div>
+            <div class="form-group__text">
+              <label for="gift-organization-id">ID организации</label>
+              <input type="text" id="gift-organization-id" name="gift-organization-id">
+            </div>
+            <div class="form-group__text">
+              <label for="gift-type">Тип подарка</label>
+              <input type="text" id="gift-type" name="gift-type">
+            </div>
+            <div class="form-group__text">
+              <label for="gift-name">Название</label>
+              <input type="text" id="gift-name" name="gift-name">
+            </div>
+            <div class="form-group__text textarea">
+              <label for="gift-description">Описание</label>
+              <textarea id="gift-description" name="gift-description"></textarea>
+            </div>
+            <div class="form-group__text">
+              <label for="gift-number">Количество<br>подарков </label>
+              <input type="text" id="gift-number" name="gift-number">
+            </div>
+          </div>
+          <div class="right-form">
+            <div class="form-group__text">
+              <label for="gift-offer-period">Сроки акции</label>
+              <input type="text" id="gift-offer-period" name="gift-offer-period">
+            </div>
+            <div class="form-group__text">
+              <label for="gift-creation-date">Дата создания</label>
+              <input type="text" id="gift-creation-date" name="gift-creation-date">
+            </div>
+            <div class="form-group__text">
+              <label for="gift-collection-date">Дата сбора</label>
+              <input type="text" id="gift-collection-date" name="gift-collection-date">
+            </div>
+            <div class="form-group__text">
+              <label for="gift-recieving-date">Дата получения</label>
+              <input type="text" id="gift-recieving-date" name="gift-recieving-date">
+            </div>
+            <div class="form-group__text">
+              <label for="acc-status">Статус</label>
+              <input type="text" id="acc-status" name="acc-status">
+            </div>
+            <div class="form-group__text">
+              <label for="gift-activity">Активность</label>
+              <input type="text" id="gift-activity" name="gift-activity">
+            </div>
+          </div><a class="form-button button__delete"><span>Отмена </span></a><a class="form-button button__accept"><span>Сохранить изменения</span></a>
+        </form>
       </div>
     </div>
-    <div id="modal-text">
-      <div class="modal-phone-container">
-        <div class="modal-phone-info">
-          <p>ID</p>
-          <p>Username / Полное название компании</p>
-          <p>ФИО / Фактическое название компании</p>
-          <p>Тема сообщения</p>
-          <p>Телефон</p>
-          <p>E-mail  </p>
-        </div>
-        <div class="modal-phone-comment">
-          <textarea class="modal-phone-comment__textarea modal-phone-comment-new" placeholder="Тело сообщения"></textarea>
-        </div>
-        <div class="modal-phone-images"><img src="assets/images/img-placeholder.png"><img src="assets/images/img-placeholder.png"><img src="assets/images/img-placeholder.png"><img src="assets/images/img-placeholder.png"><img src="assets/images/img-placeholder.png"></div>
-        <div class="modal-phone-links modal-phone-links-new"><a class="requests-content__link blue">обращение от 01.01.2019</a><br><a class="requests-content__link blue">обращение от 05.10.2018</a><br><a class="requests-content__link blue">обращение от 10.12.2018</a><a class="requests-content__extend-link"><img src="assets/images/extend.svg"></a></div>
-        <div class="modal-phone-comment">
-          <textarea class="modal-phone-comment__textarea" placeholder="Ответ оператора на сообщение"></textarea>
-        </div>
-        <div class="modal-phone-buttons modal-phone-buttons-new"><a class="modal-phone-buttons__delay"><span>Заявка отложена</span></a><a class="modal-phone-buttons__solve"><span>Проблема устранена</span></a></div>
-      </div>
-    </div>
-    <div id="modal-gift">
-      <div class="modal-gift-container">
-        <div class="modal-gift-info">
-          <div class="modal-gift-image"><img src="assets/images/gift-image.svg"></div>
-          <p>Название подарка</p>
-          <p>Описание подарка             </p>
-        </div>
-        <div class="modal-gift-checkboxes">
-          <input type="checkbox" id="problem1" name="problem1">
-          <label for="problem1">Несоответствие иконки товара</label><br>
-          <input type="checkbox" id="problem2" name="problem2">
-          <label for="problem2">Несоответствие названия товару</label><br>
-          <input type="checkbox" id="problem3" name="problem3">
-          <label for="problem3">Несоответствие подписи товару</label>
-        </div>
-        <div class="modal-gift-buttons"><a class="modal-gift-buttons__delay"><span>Нет</span></a><a class="modal-gift-buttons__solve"><span>Да</span></a></div>
-      </div>
-    </div>
-    <div id="modal-acc">
-      <div class="modal-acc-container">
-        <div class="modal-acc-box">
-          <div class="modal-acc-box-images"><img src="assets/images/photo1.png"></div>
-          <div class="modal-acc-box-radio">                   
-            <input class="radio-y" type="radio" id="yes1" name="block1">
-            <label for="yes1">Да                    </label>
-            <input type="radio" id="no1" name="block1">
-            <label for="no1">Нет                   </label>
+    <div class="modal" id="modal-supergift-admin">
+      <div class="modal-supergift-admin-container">
+        <div class="supergift-image"><img src="assets/images/supergift-img.svg"><a>Добавить изображение</a></div>
+        <form class="gift-form modal-form">
+          <div class="left-form">
+            <div class="form-group__text">
+              <label for="supergift-name">Название</label>
+              <input type="text" id="supergift-name" name="supergift-name">
+            </div>
+            <div class="form-group__text">
+              <label for="supergift-organization-name">Имя организации</label>
+              <input type="text" id="supergift-organization-name" name="supergift-organization-name">
+            </div>
+            <div class="form-group__text">
+              <label for="supergift-number">Количество</label>
+              <input type="text" id="supergift-number" name="supergift-number">
+            </div>
+            <div class="form-group__text">
+              <label for="supergift-city">Город</label>
+              <input type="text" id="supergift-city" name="supergift-city">
+            </div>
+            <div class="form-group__text">
+              <label for="supergift-adress">Адрес</label>
+              <input type="text" id="supergift-adress" name="supergift-adress">
+            </div>
           </div>
-          <div class="modal-acc-box-images">                   <img src="assets/images/photo2.png"></div>
-          <div class="modal-acc-box-radio">                   
-            <input class="radio-y" type="radio" id="yes2" name="block2">
-            <label for="yes2">Да                                        </label>
-            <input type="radio" id="no2" name="block2">
-            <label for="no2">Нет                    </label>
-          </div>
-        </div>
-        <div class="modal-acc-box">
-          <div class="modal-acc-box-text">
-            <p class="modal-acc-box-text__subheader">Юридическое наименование</p>
-            <p class="modal-acc-box-text__header">Юридическое наименование                    </p>
-          </div>
-          <div class="modal-acc-box-radio">                   
-            <input class="radio-y" type="radio" id="yes3" name="block3">
-            <label for="yes3">Да                    </label>
-            <input type="radio" id="no3" name="block3">
-            <label for="no3">Нет</label>
-          </div>
-        </div>
-        <div class="modal-acc-box">
-          <div class="modal-acc-box-text">
-            <p class="modal-acc-box-text__subheader">Фактическое наименование</p>
-            <p class="modal-acc-box-text__header">Фактическое наименование                    </p>
-          </div>
-          <div class="modal-acc-box-radio">                   
-            <input class="radio-y" type="radio" id="yes4" name="block4">
-            <label for="yes4">Да                    </label>
-            <input type="radio" id="no4" name="block4">
-            <label for="no4">Нет</label>
-          </div>
-        </div>
-        <div class="modal-acc-box">
-          <div class="modal-acc-box-text">
-            <p class="modal-acc-box-text__subheader">ОГРН</p>
-            <p class="modal-acc-box-text__header">123456789123456                    </p>
-          </div>
-          <div class="modal-acc-box-radio">                   
-            <input class="radio-y" type="radio" id="yes5" name="block5">
-            <label for="yes5">Да                    </label>
-            <input type="radio" id="no5" name="block5">
-            <label for="no5">Нет</label>
-          </div>
-        </div>
-        <div class="modal-acc-box">
-          <div class="modal-acc-box-text">
-            <p class="modal-acc-box-text__subheader">ИНН</p>
-            <p class="modal-acc-box-text__header">123456789123456                    </p>
-          </div>
-          <div class="modal-acc-box-radio">                   
-            <input class="radio-y" type="radio" id="yes6" name="block6">
-            <label for="yes6">Да                    </label>
-            <input type="radio" id="no6" name="block6">
-            <label for="no6">Нет</label>
-          </div>
-        </div>
-        <div class="modal-acc-box">
-          <div class="modal-acc-box-text">
-            <p class="modal-acc-box-text__subheader">Телефон</p>
-            <p class="modal-acc-box-text__header">123456789123456                   </p>
-          </div>
-          <div class="modal-acc-box-radio">                   
-            <input class="radio-y" type="radio" id="yes7" name="block7">
-            <label for="yes7">Да                    </label>
-            <input type="radio" id="no7" name="block7">
-            <label for="no7">Нет</label>
-          </div>
-        </div>
-        <div class="modal-acc-box">
-          <div class="modal-acc-box-text">
-            <p class="modal-acc-box-text__subheader">Описание компании</p>
-            <p class="modal-acc-box-text__header">Таким образом рамки и место обучения кадров позволяет выполнять важные задания по разработке соответствующий условий активизации.                 </p>
-          </div>
-          <div class="modal-acc-box-radio">                   
-            <input class="radio-y" type="radio" id="yes8" name="block8">
-            <label for="yes8">Да                    </label>
-            <input type="radio" id="no8" name="block8">
-            <label for="no8">Нет</label>
-          </div>
-        </div>
-        <div class="modal-acc-buttons">               <a class="modal-acc-buttons__solve"><span>Да</span></a></div>
+          <div class="right-form">
+            <div class="form-group__text">
+              <label for="supergift-price">Цена</label>
+              <input type="text" id="supergift-price" name="supergift-price">
+            </div>
+            <div class="form-group__text">
+              <label for="supergift-creation-date">Дата создания</label>
+              <input type="text" id="supergift-creation-date" name="supergift-creation-date">
+            </div>
+            <div class="form-group__text">
+              <label for="supergift-ending-date">Дата окончания</label>
+              <input type="text" id="supergift-ending-date" name="supergift-ending-date">
+            </div>
+            <div class="form-group__radio">                       
+              <input type="radio" id="supergift-available" name="supergift-isavailable">
+              <label for="supergift-available">Доступен                                            </label>
+              <input type="radio" id="supergift-not-available" name="supergift-isavailable">
+              <label for="supergift-not-available">Не доступен</label>
+            </div>
+          </div><a class="form-button button__delete"><span>Отмена </span></a><a class="form-button button__accept"><span>Сохранить изменения    </span></a>
+        </form>
       </div>
     </div>
   </body>

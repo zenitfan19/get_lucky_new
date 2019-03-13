@@ -3,11 +3,20 @@ $(document).on('click', '.header-menu__link:not(active)', function(){
     $(this).addClass('active').siblings('.header-menu__link').removeClass('active');    
     $('.main-container').removeClass('active').eq($(this).index()).addClass('active');    
 });
+$(document).on('click', '.category-name:not(active)', function(){
+    $(this).addClass('active').siblings('.category-name').removeClass('active');        
+});
 $(document).on('click', '.left-tabs__link-header:not(active)', function(){
     var page_number = $(this).data('page');
     var active_header_link = $(this).index() + 1; 
     var active_link = $('.left-tabs__link*[data-page='+page_number+'][data-header-link='+active_header_link+'].active').index()+1;
     var active_sublink = $('.left-tabs__sublink*[data-page='+page_number+'][data-header-link='+active_header_link+'][data-link='+active_link+'].active').index()+1;
+    if((page_number==5) && (active_header_link==3)) {
+        $('.right-controls').css('display', 'none');
+    } else {
+        $('.right-controls').css('display', 'flex');
+    }
+
     $(this).addClass('active').siblings('.left-tabs__link-header*[data-page='+page_number+']').removeClass('active');
     $('.link-header-container*[data-page='+page_number+']').removeClass('active').eq($(this).index()).addClass('active');
     $('.link-container*[data-page='+page_number+']').removeClass('active');
