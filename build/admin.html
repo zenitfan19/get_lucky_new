@@ -10,10 +10,12 @@
     <link href="assets/styles/normalize.css" rel="stylesheet">
     <link href="assets/styles/jquery.fancybox.min.css" rel="stylesheet">
     <link href="assets/styles/sumoselect.css" rel="stylesheet">
+    <link href="assets/styles/perfect-scrollbar.css" rel="stylesheet">
     <link href="assets/styles/app.min.css" rel="stylesheet">
     <script src="assets/scripts/jquery-3.3.1.min.js"></script>
     <script src="assets/scripts/jquery.sumoselect.min.js"></script>
     <script src="assets/scripts/jquery.fancybox.js"></script>
+    <script src="assets/scripts/perfect-scrollbar.min.js"></script>
     <script src="assets/scripts/myscript.js">      </script>
   </head>
   <body>
@@ -403,7 +405,7 @@
       <div class="page-title">
         <div class="left-tabs-headers"><a class="left-tabs__link-header active" data-page="5">подарки</a><a class="left-tabs__link-header" data-page="5">суперподарки</a><a class="left-tabs__link-header" data-page="5">цена  </a></div>
         <div class="right-controls">
-          <div class="control-buttons"><a class="add-btn" href=""><img src="assets/images/add-btn.svg"></a><a class="refresh-btn" href=""><img src="assets/images/refresh-btn.svg"></a></div>
+          <div class="control-buttons"><a class="add-btn" data-fancybox data-src="#modal-supergift-admin" data-options="{ &quot;touch&quot;: false }"><img src="assets/images/add-btn.svg"></a><a class="refresh-btn" href=""><img src="assets/images/refresh-btn.svg"></a></div>
           <div class="search-form">
             <form action="">
               <input type="search" placeholder="Поиск">
@@ -479,8 +481,40 @@
               </form>
             </div>
           </div>
-          <form class="gift-form modal-form price-form">
+          <div class="gift-form modal-form price-form">
             <div class="left-form">
+              <div class="form-group__text">
+                <label for="gift-price-common">Общий</label>
+                <input type="text" id="gift-price-common" name="gift-price-common">
+              </div>
+              <div class="form-group__text">
+                <label for="gift-price-targeted">Таргетированный</label>
+                <input type="text" id="gift-price-targeted" name="gift-price-targeted">
+              </div>
+              <div class="form-group__text">
+                <label for="gift-price-supertargeted">Супертаргетированный</label>
+                <input type="text" id="gift-price-supertargeted" name="gift-price-supertargeted">
+              </div>
+              <div class="form-group__text">
+                <label for="gift-price-smartphone">Закрепленный<br>за смартфоном</label>
+                <input type="text" id="gift-price-smartphone" name="gift-price-smartphone">
+              </div>
+              <div class="form-group__text">
+                <label for="gift-price-common">Общий</label>
+                <input type="text" id="gift-price-common" name="gift-price-common">
+              </div>
+              <div class="form-group__text">
+                <label for="gift-price-targeted">Таргетированный</label>
+                <input type="text" id="gift-price-targeted" name="gift-price-targeted">
+              </div>
+              <div class="form-group__text">
+                <label for="gift-price-supertargeted">Супертаргетированный</label>
+                <input type="text" id="gift-price-supertargeted" name="gift-price-supertargeted">
+              </div>
+              <div class="form-group__text">
+                <label for="gift-price-smartphone">Закрепленный<br>за смартфоном</label>
+                <input type="text" id="gift-price-smartphone" name="gift-price-smartphone">
+              </div>
               <div class="form-group__text">
                 <label for="gift-price-common">Общий</label>
                 <input type="text" id="gift-price-common" name="gift-price-common">
@@ -516,7 +550,7 @@
                 <input type="text" id="gift-price-smartphone" name="gift-price-smartphone">
               </div>
             </div><a class="form-button button__save"><span>Сохранить</span></a><a class="form-button button__accept"><span>Добавить</span></a><a class="form-button button__delete"><span>Удалить </span></a>
-          </form>
+          </div>
         </div>
       </div>
     </div>
@@ -815,8 +849,47 @@
               <input type="radio" id="supergift-not-available" name="supergift-isavailable">
               <label for="supergift-not-available">Не доступен</label>
             </div>
-          </div><a class="form-button button__delete"><span>Отмена </span></a><a class="form-button button__accept"><span>Сохранить изменения    </span></a>
+          </div><a class="form-button button__delete"><span>Отмена </span></a><a class="form-button button__accept"><span>Сохранить изменения </span></a>
         </form>
+      </div>
+    </div>
+    <div id="modal-phone">
+      <div class="modal-phone-container">
+        <div class="modal-phone-info">
+          <p>ID</p>
+          <p>Username / Полное название компании</p>
+          <p>ФИО / Фактическое название компании</p>
+          <p>Телефон</p>
+          <p>E-mail</p>
+          <p>Временной интервал для созвона (10:00-18:00)</p><br>
+          <p>Тема сообщения</p>
+        </div>
+        <div class="modal-phone-links"><a class="requests-content__link blue">обращение от 01.01.2019</a><br><a class="requests-content__link blue">обращение от 05.10.2018</a><br><a class="requests-content__link blue">обращение от 10.12.2018</a><a class="requests-content__extend-link"><img src="assets/images/extend.svg"></a></div>
+        <div class="modal-phone-comment">
+          <textarea class="modal-phone-comment__textarea" placeholder="Комментарий оператора"></textarea>
+        </div>
+        <div class="modal-phone-buttons"><a class="modal-phone-buttons__delay"><span>Заявка отложена</span></a><a class="modal-phone-buttons__solve"><span>Проблема устранена</span></a></div>
+      </div>
+    </div>
+    <div id="modal-text">
+      <div class="modal-phone-container">
+        <div class="modal-phone-info">
+          <p>ID</p>
+          <p>Username / Полное название компании</p>
+          <p>ФИО / Фактическое название компании</p>
+          <p>Тема сообщения</p>
+          <p>Телефон</p>
+          <p>E-mail  </p>
+        </div>
+        <div class="modal-phone-comment">
+          <textarea class="modal-phone-comment__textarea modal-phone-comment-new" placeholder="Тело сообщения"></textarea>
+        </div>
+        <div class="modal-phone-images"><img src="assets/images/img-placeholder.png"><img src="assets/images/img-placeholder.png"><img src="assets/images/img-placeholder.png"><img src="assets/images/img-placeholder.png"><img src="assets/images/img-placeholder.png"></div>
+        <div class="modal-phone-links modal-phone-links-new"><a class="requests-content__link blue">обращение от 01.01.2019</a><br><a class="requests-content__link blue">обращение от 05.10.2018</a><br><a class="requests-content__link blue">обращение от 10.12.2018</a><a class="requests-content__extend-link"><img src="assets/images/extend.svg"></a></div>
+        <div class="modal-phone-comment">
+          <textarea class="modal-phone-comment__textarea" placeholder="Ответ оператора на сообщение"></textarea>
+        </div>
+        <div class="modal-phone-buttons modal-phone-buttons-new"><a class="modal-phone-buttons__delay"><span>Заявка отложена</span></a><a class="modal-phone-buttons__solve"><span>Проблема устранена</span></a></div>
       </div>
     </div>
   </body>
