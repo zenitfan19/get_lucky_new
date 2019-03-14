@@ -6,19 +6,21 @@ block variables
 
 block content
     .main-container.active        
-        .right-controls
-            .control-buttons
-                a.add-btn(href="")
-                    img(src="assets/images/add-btn.svg")
-                a.refresh-btn(href="")
-                    img(src="assets/images/refresh-btn.svg")
-            .search-form
-                form(action="")
-                    input(type="search", placeholder="Поиск")       
-        .left-tabs-headers
-            a.left-tabs__link-header(data-page='1').active решенные
-            a.left-tabs__link-header(data-page='1') нерешенные
-            a.left-tabs__link-header(data-page='1') отложенные
+        .page-title
+            .left-tabs-headers
+                a.left-tabs__link-header(data-page='1').active решенные
+                a.left-tabs__link-header(data-page='1') нерешенные
+                a.left-tabs__link-header(data-page='1') отложенные
+            .right-controls
+                .control-buttons
+                    a.add-btn(href="")
+                        img(src="assets/images/add-btn.svg")
+                    a.refresh-btn(href="")
+                        img(src="assets/images/refresh-btn.svg")
+                .search-form
+                    form(action="")
+                        input(type="search", placeholder="Поиск")       
+            
         .link-header-container(data-page='1').active
             table.requests(cellspacing=0)
                 thead.requests-header
@@ -113,24 +115,27 @@ block content
                         td
 
     .main-container       
-        .right-controls
-            .control-buttons
-                a.add-btn(href="")
-                    img(src="assets/images/add-btn.svg")
-                a.refresh-btn(href="")
-                    img(src="assets/images/refresh-btn.svg")
-            .search-form
-                form(action="")
-                    input(type="search", placeholder="Поиск")       
-        .left-tabs-headers
-            a.left-tabs__link-header(data-page='2').active бизнес-аккаунты
-            a.left-tabs__link-header(data-page='2') подарки
-        .left-tabs.link-header-container(data-page='2').active
-            a.left-tabs__link(data-page='2' data-header-link='1').active Прошли модерацию
-            a.left-tabs__link(data-page='2' data-header-link='1') Не прошли модерацию
-        .left-tabs.link-header-container(data-page='2')
-            a.left-tabs__link(data-page='2' data-header-link='2').active Прошли модерацию
-            a.left-tabs__link(data-page='2' data-header-link='2') Не прошли модерацию           
+        .page-title
+            .left-tabs-headers
+                a.left-tabs__link-header(data-page='2').active бизнес-аккаунты
+                a.left-tabs__link-header(data-page='2') подарки
+            .right-controls
+                .control-buttons
+                    a.add-btn(href="")
+                        img(src="assets/images/add-btn.svg")
+                    a.refresh-btn(href="")
+                        img(src="assets/images/refresh-btn.svg")
+                .search-form
+                    form(action="")
+                        input(type="search", placeholder="Поиск") 
+            .left-tabs.link-header-container(data-page='2').active
+                a.left-tabs__link(data-page='2' data-header-link='1').active Прошли модерацию
+                a.left-tabs__link(data-page='2' data-header-link='1') Не прошли модерацию
+            .left-tabs.link-header-container(data-page='2')
+                a.left-tabs__link(data-page='2' data-header-link='2').active Прошли модерацию
+                a.left-tabs__link(data-page='2' data-header-link='2') Не прошли модерацию
+                  
+                   
         .link-container.active(data-page='2' data-header-link='1' data-link='1')
             table.requests(cellspacing=0)
                 thead.requests-header
@@ -288,18 +293,20 @@ block content
                         td
 
     .main-container        
-        .right-controls
-            .control-buttons
-                a.add-btn(href="")
-                    img(src="assets/images/add-btn.svg")
-                a.refresh-btn(href="")
-                    img(src="assets/images/refresh-btn.svg")
-            .search-form
-                form(action="")
-                    input(type="search", placeholder="Поиск")       
-        .left-tabs-headers
-            a.left-tabs__link-header(data-page='4').active бизнес-аккаунты
-            a.left-tabs__link-header(data-page='4') пользователи            
+        .page-title
+            .left-tabs-headers
+                a.left-tabs__link-header(data-page='4').active бизнес-аккаунты
+                a.left-tabs__link-header(data-page='4') пользователи 
+            .right-controls
+                .control-buttons
+                    a.add-btn(href="")
+                        img(src="assets/images/add-btn.svg")
+                    a.refresh-btn(href="")
+                        img(src="assets/images/refresh-btn.svg")
+                .search-form
+                    form(action="")
+                        input(type="search", placeholder="Поиск")       
+                   
         .link-header-container(data-page='4').active
             table.requests(cellspacing=0)
                 thead.requests-header
@@ -347,19 +354,21 @@ block content
                         td 
 
     .main-container        
-        .right-controls
-            .control-buttons
-                a.add-btn(href="")
-                    img(src="assets/images/add-btn.svg")
-                a.refresh-btn(href="")
-                    img(src="assets/images/refresh-btn.svg")
-            .search-form
-                form(action="")
-                    input(type="search", placeholder="Поиск")       
-        .left-tabs-headers
-            a.left-tabs__link-header(data-page='5').active подарки
-            a.left-tabs__link-header(data-page='5') суперподарки
-            a.left-tabs__link-header(data-page='5') цена            
+        .page-title
+            .left-tabs-headers
+                a.left-tabs__link-header(data-page='5').active подарки
+                a.left-tabs__link-header(data-page='5') суперподарки
+                a.left-tabs__link-header(data-page='5') цена  
+            .right-controls
+                .control-buttons
+                    a.add-btn(href="")
+                        img(src="assets/images/add-btn.svg")
+                    a.refresh-btn(href="")
+                        img(src="assets/images/refresh-btn.svg")
+                .search-form
+                    form(action="")
+                        input(type="search", placeholder="Поиск")       
+                  
         .link-header-container(data-page='5').active
             table.requests(cellspacing=0)
                 thead.requests-header
@@ -582,9 +591,15 @@ block content
                     div.form-group__text
                         label(for="business-money") Деньги
                         input(type="text", id="business-money", name="business-money")
-                    div.form-group__text
-                        label(for="business-status") Статус
-                        input(type="text", id="business-status", name="business-status")
+                    div.form-group__select
+                        label(for="business-status") Статус                  
+                        select(id="business-status")
+                            i csdasdasd                            
+                            option(value="" disabled selected)
+                            option(value="in-progress") In progress
+                            option(value="available") Available
+                            option(value="error") Error
+                        
                     
                 a.form-button.button__delete
                     span Удалить аккаунт
@@ -610,15 +625,25 @@ block content
                                   
 
                 .right-form
-                    div.form-group__text
-                        label(for="acc-rights") Право доступа
-                        input(type="text", id="acc-rights", name="acc-rights")
+                    div.form-group__select
+                        label(for="acc-rights") Право доступа                  
+                        select(id="acc-rights")                                            
+                            option(value="" disabled selected)
+                            option(value="simple") Simple
+                            option(value="org") Org
+                            option(value="banned") Banned
+                            option(value="operator") Operator
+                            option(value="moderator") Moderator
+                            option(value="adminisrator") Administrator
                     div.form-group__text
                         label(for="acc-device") Устройство
                         input(type="text", id="acc-device", name="acc-device")
-                    div.form-group__text
-                        label(for="acc-approved") Подтвержден
-                        input(type="text", id="acc-approved", name="acc-approved")
+                    div.form-group__select
+                        label(for="acc-approved") Подтвержен                 
+                        select(id="acc-approved")                                            
+                            option(value="" disabled selected)
+                            option(value="approved") Подтвержден
+                            option(value="not-approved") Не подтвержден                        
                     div.form-group__text
                         label(for="acc-reg-date") Дата создания
                         input(type="text", id="acc-reg-date", name="acc-reg-date")
@@ -667,12 +692,18 @@ block content
                     div.form-group__text
                         label(for="gift-recieving-date") Дата получения
                         input(type="text", id="gift-recieving-date", name="gift-recieving-date")
-                    div.form-group__text
-                        label(for="acc-status") Статус
-                        input(type="text", id="acc-status", name="acc-status")
-                    div.form-group__text
-                        label(for="gift-activity") Активность
-                        input(type="text", id="gift-activity", name="gift-activity")
+                    div.form-group__select
+                        label(for="gift-status") Статус                  
+                        select(id="gift-status")                                            
+                            option(value="" disabled selected)
+                            option(value="available") Available
+                            option(value="not-available") Not available
+                    div.form-group__select
+                        label(for="gift-activity") Активность                  
+                        select(id="gift-activity")                                            
+                            option(value="" disabled selected)
+                            option(value="active") Активный
+                            option(value="not-active") Неактивный
                 a.form-button.button__delete
                     span Отмена 
                 a.form-button.button__accept

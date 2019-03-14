@@ -11,10 +11,19 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    .add-btn {
+        display: none;
+    }           
+}
+.page-title {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr minmax(auto, auto) minmax(auto, auto); 
 }
 .left-tabs-headers {
     display: flex;
-    flex-direction: row;    
+    flex-direction: row;
+    align-items: flex-end;    
 }
 .left-tabs__link-header.active, .left-tabs__link-header1.active {
     color: black;
@@ -70,18 +79,73 @@
     margin-right: 20px;
     font-size: 14px;
 }
-.form-group__text {
+.form-group__text, .form-group__select {
     text-align: right;
     display: grid;
     grid-template-columns: 1fr 200px;
     align-items: center;
     margin-bottom: 35px;
 }
-.form-group__text input, .form-group__text textarea {
+.form-group__text input, .form-group__text textarea, .form-group__select select {
     height: 28px;
     border: 1px solid #4A5B6D;
     border-radius: 3px;
     background-color: transparent;
+    padding: 0px 8px;
+}
+.SumoSelect > .CaptionCont {
+    height: 28px;
+    border: 1px solid #4A5B6D;
+    border-radius: 3px;
+    background-color: transparent;
+}
+.SumoSelect:focus > .CaptionCont,
+.SumoSelect:hover > .CaptionCont,
+.SumoSelect.open > .CaptionCont {
+    box-shadow: none;
+    border-color: #4A5B6D;
+}
+.SumoSelect {
+    .options li:nth-child(1) {
+        display: none;
+    }
+    .select-up-arrow {
+        padding: 5px;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        z-index: 999;
+        cursor: pointer;
+    }
+    .SelectBox {
+        padding: 2px 8px;
+    }
+    .optWrapper {
+        top: 0px !important;
+        box-shadow: none;
+        background-color: #D3D3D3;
+        border: 1px solid #4A5B6D;        
+        li {
+            border-bottom: none !important;
+            text-align: left;
+        }
+    }
+    .placeholder {
+        display: none !important;
+    }
+    .CaptionCont {
+        span {
+            text-align: left;
+        }
+        label {        
+            width: 0px !important;
+            i {
+                cursor: pointer;
+                background-image: url(../images/select-down.svg) !important;
+            }
+        }
+    }
+    
 }
 .form-group__text.textarea textarea {
     height: 91px;    

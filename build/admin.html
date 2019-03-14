@@ -9,8 +9,10 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link href="assets/styles/normalize.css" rel="stylesheet">
     <link href="assets/styles/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="assets/styles/sumoselect.css" rel="stylesheet">
     <link href="assets/styles/app.min.css" rel="stylesheet">
     <script src="assets/scripts/jquery-3.3.1.min.js"></script>
+    <script src="assets/scripts/jquery.sumoselect.min.js"></script>
     <script src="assets/scripts/jquery.fancybox.js"></script>
     <script src="assets/scripts/myscript.js">      </script>
   </head>
@@ -22,15 +24,17 @@
       </div>
     </div>
     <div class="main-container active">       
-      <div class="right-controls">
-        <div class="control-buttons"><a class="add-btn" href=""><img src="assets/images/add-btn.svg"></a><a class="refresh-btn" href=""><img src="assets/images/refresh-btn.svg"></a></div>
-        <div class="search-form">
-          <form action="">
-            <input type="search" placeholder="Поиск">
-          </form>
+      <div class="page-title">
+        <div class="left-tabs-headers"><a class="left-tabs__link-header active" data-page="1">решенные</a><a class="left-tabs__link-header" data-page="1">нерешенные</a><a class="left-tabs__link-header" data-page="1">отложенные</a></div>
+        <div class="right-controls">
+          <div class="control-buttons"><a class="add-btn" href=""><img src="assets/images/add-btn.svg"></a><a class="refresh-btn" href=""><img src="assets/images/refresh-btn.svg"></a></div>
+          <div class="search-form">
+            <form action="">
+              <input type="search" placeholder="Поиск">
+            </form>
+          </div>
         </div>
       </div>
-      <div class="left-tabs-headers"><a class="left-tabs__link-header active" data-page="1">решенные</a><a class="left-tabs__link-header" data-page="1">нерешенные</a><a class="left-tabs__link-header" data-page="1">отложенные</a></div>
       <div class="link-header-container active" data-page="1">
         <table class="requests" cellspacing="0">
           <thead class="requests-header">
@@ -138,17 +142,19 @@
       </div>
     </div>
     <div class="main-container">      
-      <div class="right-controls">
-        <div class="control-buttons"><a class="add-btn" href=""><img src="assets/images/add-btn.svg"></a><a class="refresh-btn" href=""><img src="assets/images/refresh-btn.svg"></a></div>
-        <div class="search-form">
-          <form action="">
-            <input type="search" placeholder="Поиск">
-          </form>
+      <div class="page-title">
+        <div class="left-tabs-headers"><a class="left-tabs__link-header active" data-page="2">бизнес-аккаунты</a><a class="left-tabs__link-header" data-page="2">подарки</a></div>
+        <div class="right-controls">
+          <div class="control-buttons"><a class="add-btn" href=""><img src="assets/images/add-btn.svg"></a><a class="refresh-btn" href=""><img src="assets/images/refresh-btn.svg"></a></div>
+          <div class="search-form">
+            <form action="">
+              <input type="search" placeholder="Поиск">
+            </form>
+          </div>
         </div>
+        <div class="left-tabs link-header-container active" data-page="2"><a class="left-tabs__link active" data-page="2" data-header-link="1">Прошли модерацию</a><a class="left-tabs__link" data-page="2" data-header-link="1">Не прошли модерацию</a></div>
+        <div class="left-tabs link-header-container" data-page="2"><a class="left-tabs__link active" data-page="2" data-header-link="2">Прошли модерацию</a><a class="left-tabs__link" data-page="2" data-header-link="2">Не прошли модерацию</a></div>
       </div>
-      <div class="left-tabs-headers"><a class="left-tabs__link-header active" data-page="2">бизнес-аккаунты</a><a class="left-tabs__link-header" data-page="2">подарки</a></div>
-      <div class="left-tabs link-header-container active" data-page="2"><a class="left-tabs__link active" data-page="2" data-header-link="1">Прошли модерацию</a><a class="left-tabs__link" data-page="2" data-header-link="1">Не прошли модерацию</a></div>
-      <div class="left-tabs link-header-container" data-page="2"><a class="left-tabs__link active" data-page="2" data-header-link="2">Прошли модерацию</a><a class="left-tabs__link" data-page="2" data-header-link="2">Не прошли модерацию           </a></div>
       <div class="link-container active" data-page="2" data-header-link="1" data-link="1">
         <table class="requests" cellspacing="0">
           <thead class="requests-header">
@@ -326,15 +332,17 @@
       </div>
     </div>
     <div class="main-container">       
-      <div class="right-controls">
-        <div class="control-buttons"><a class="add-btn" href=""><img src="assets/images/add-btn.svg"></a><a class="refresh-btn" href=""><img src="assets/images/refresh-btn.svg"></a></div>
-        <div class="search-form">
-          <form action="">
-            <input type="search" placeholder="Поиск">
-          </form>
+      <div class="page-title">
+        <div class="left-tabs-headers"><a class="left-tabs__link-header active" data-page="4">бизнес-аккаунты</a><a class="left-tabs__link-header" data-page="4">пользователи </a></div>
+        <div class="right-controls">
+          <div class="control-buttons"><a class="add-btn" href=""><img src="assets/images/add-btn.svg"></a><a class="refresh-btn" href=""><img src="assets/images/refresh-btn.svg"></a></div>
+          <div class="search-form">
+            <form action="">
+              <input type="search" placeholder="Поиск">
+            </form>
+          </div>
         </div>
       </div>
-      <div class="left-tabs-headers"><a class="left-tabs__link-header active" data-page="4">бизнес-аккаунты</a><a class="left-tabs__link-header" data-page="4">пользователи            </a></div>
       <div class="link-header-container active" data-page="4">
         <table class="requests" cellspacing="0">
           <thead class="requests-header">
@@ -392,15 +400,17 @@
       </div>
     </div>
     <div class="main-container">       
-      <div class="right-controls">
-        <div class="control-buttons"><a class="add-btn" href=""><img src="assets/images/add-btn.svg"></a><a class="refresh-btn" href=""><img src="assets/images/refresh-btn.svg"></a></div>
-        <div class="search-form">
-          <form action="">
-            <input type="search" placeholder="Поиск">
-          </form>
+      <div class="page-title">
+        <div class="left-tabs-headers"><a class="left-tabs__link-header active" data-page="5">подарки</a><a class="left-tabs__link-header" data-page="5">суперподарки</a><a class="left-tabs__link-header" data-page="5">цена  </a></div>
+        <div class="right-controls">
+          <div class="control-buttons"><a class="add-btn" href=""><img src="assets/images/add-btn.svg"></a><a class="refresh-btn" href=""><img src="assets/images/refresh-btn.svg"></a></div>
+          <div class="search-form">
+            <form action="">
+              <input type="search" placeholder="Поиск">
+            </form>
+          </div>
         </div>
       </div>
-      <div class="left-tabs-headers"><a class="left-tabs__link-header active" data-page="5">подарки</a><a class="left-tabs__link-header" data-page="5">суперподарки</a><a class="left-tabs__link-header" data-page="5">цена            </a></div>
       <div class="link-header-container active" data-page="5">
         <table class="requests" cellspacing="0">
           <thead class="requests-header">
@@ -623,9 +633,14 @@
               <label for="business-money">Деньги</label>
               <input type="text" id="business-money" name="business-money">
             </div>
-            <div class="form-group__text">
-              <label for="business-status">Статус</label>
-              <input type="text" id="business-status" name="business-status">
+            <div class="form-group__select">
+              <label for="business-status">Статус                  </label>
+              <select id="business-status"><i>csdasdasd                            </i>
+                <option value="" disabled selected></option>
+                <option value="in-progress">In progress</option>
+                <option value="available">Available</option>
+                <option value="error">Error</option>
+              </select>
             </div>
           </div><a class="form-button button__delete"><span>Удалить аккаунт</span></a><a class="form-button button__accept"><span>Сохранить изменения</span></a>
         </form>
@@ -653,17 +668,29 @@
             </div>
           </div>
           <div class="right-form">
-            <div class="form-group__text">
-              <label for="acc-rights">Право доступа</label>
-              <input type="text" id="acc-rights" name="acc-rights">
+            <div class="form-group__select">
+              <label for="acc-rights">Право доступа                  </label>
+              <select id="acc-rights">                                           
+                <option value="" disabled selected></option>
+                <option value="simple">Simple</option>
+                <option value="org">Org</option>
+                <option value="banned">Banned</option>
+                <option value="operator">Operator</option>
+                <option value="moderator">Moderator</option>
+                <option value="adminisrator">Administrator</option>
+              </select>
             </div>
             <div class="form-group__text">
               <label for="acc-device">Устройство</label>
               <input type="text" id="acc-device" name="acc-device">
             </div>
-            <div class="form-group__text">
-              <label for="acc-approved">Подтвержден</label>
-              <input type="text" id="acc-approved" name="acc-approved">
+            <div class="form-group__select">
+              <label for="acc-approved">Подтвержен                 </label>
+              <select id="acc-approved">                                           
+                <option value="" disabled selected></option>
+                <option value="approved">Подтвержден</option>
+                <option value="not-approved">Не подтвержден                        </option>
+              </select>
             </div>
             <div class="form-group__text">
               <label for="acc-reg-date">Дата создания</label>
@@ -723,13 +750,21 @@
               <label for="gift-recieving-date">Дата получения</label>
               <input type="text" id="gift-recieving-date" name="gift-recieving-date">
             </div>
-            <div class="form-group__text">
-              <label for="acc-status">Статус</label>
-              <input type="text" id="acc-status" name="acc-status">
+            <div class="form-group__select">
+              <label for="gift-status">Статус                  </label>
+              <select id="gift-status">                                           
+                <option value="" disabled selected></option>
+                <option value="available">Available</option>
+                <option value="not-available">Not available</option>
+              </select>
             </div>
-            <div class="form-group__text">
-              <label for="gift-activity">Активность</label>
-              <input type="text" id="gift-activity" name="gift-activity">
+            <div class="form-group__select">
+              <label for="gift-activity">Активность                  </label>
+              <select id="gift-activity">                                           
+                <option value="" disabled selected></option>
+                <option value="active">Активный</option>
+                <option value="not-active">Неактивный</option>
+              </select>
             </div>
           </div><a class="form-button button__delete"><span>Отмена </span></a><a class="form-button button__accept"><span>Сохранить изменения</span></a>
         </form>
