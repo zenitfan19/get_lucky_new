@@ -671,10 +671,10 @@ block content
                             option(value="not-approved") Не подтвержден                        
                     div.form-group__text
                         label(for="acc-reg-date") Дата создания
-                        input(type="text", id="acc-reg-date", name="acc-reg-date")
+                        input(type="text", id="acc-reg-date", placeholder="dd-mm-yyyy"  name="acc-reg-date")
                     div.form-group__text
                         label(for="acc-activity-time") Последняя активность
-                        input(type="text", id="acc-activity-time", name="acc-activity-time")
+                        input(type="text", id="acc-activity-time", placeholder="hh:mm:ss", name="acc-activity-time")
                 a.form-button.button__delete
                     span Удалить аккаунт 
                 a.form-button.button__accept
@@ -707,16 +707,16 @@ block content
                 .right-form
                     div.form-group__text
                         label(for="gift-offer-period") Сроки акции
-                        input(type="text", id="gift-offer-period", name="gift-offer-period")
+                        input(type="text", id="gift-offer-period", placeholder="dd-mm-yyyy", name="gift-offer-period")
                     div.form-group__text
                         label(for="gift-creation-date") Дата создания
-                        input(type="text", id="gift-creation-date", name="gift-creation-date")
+                        input(type="text", id="gift-creation-date", placeholder="dd-mm-yyyy", name="gift-creation-date")
                     div.form-group__text
                         label(for="gift-collection-date") Дата сбора
-                        input(type="text", id="gift-collection-date", name="gift-collection-date")
+                        input(type="text", id="gift-collection-date", placeholder="dd-mm-yyyy", name="gift-collection-date")
                     div.form-group__text
                         label(for="gift-recieving-date") Дата получения
-                        input(type="text", id="gift-recieving-date", name="gift-recieving-date")
+                        input(type="text", id="gift-recieving-date", placeholder="dd-mm-yyyy", name="gift-recieving-date")
                     div.form-group__select
                         label(for="gift-status") Статус                  
                         select(id="gift-status")                                            
@@ -764,10 +764,10 @@ block content
                         input(type="text", id="supergift-price", name="supergift-price")
                     div.form-group__text
                         label(for="supergift-creation-date") Дата создания
-                        input(type="text", id="supergift-creation-date", name="supergift-creation-date")
+                        input(type="text", id="supergift-creation-date", placeholder="dd-mm-yyyy", name="supergift-creation-date")
                     div.form-group__text
                         label(for="supergift-ending-date") Дата окончания
-                        input(type="text", id="supergift-ending-date", name="supergift-ending-date")
+                        input(type="text", id="supergift-ending-date", placeholder="dd-mm-yyyy", name="supergift-ending-date")
                     div.form-group__radio                        
                         input(type="radio", id="supergift-available", name="supergift-isavailable")
                         label(for="supergift-available") Доступен                                            

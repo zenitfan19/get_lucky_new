@@ -103,6 +103,7 @@ input[type="radio"]:not(:checked) + label:before {
     background-color: #ffff;
 }
 
+
 input[type="checkbox"]:checked + label:before,
 input[type="radio"]:checked + label:before {
     content: "";
@@ -113,6 +114,10 @@ input[type="radio"]:checked + label:before {
     height: 12px;
     border: 1px solid #56CCF2;
     background-color: #56CCF2;
+}
+input[type="radio"]:checked + label:before {    
+    border: 1px solid #111;
+    background-color: transparent;
 }
 input[type="radio"]:checked + label:before,
 input[type="radio"]:not(:checked) + label:before {
@@ -159,6 +164,7 @@ input[type="checkbox"]:not(:checked) + label:after {
     transform: rotate(-45deg);
 }
 
+
 input[type="radio"]:checked + label:after, 
 input[type="radio"]:not(:checked) + label:after {
     left: 31px;
@@ -166,7 +172,7 @@ input[type="radio"]:not(:checked) + label:after {
     width: 8px;
     height: 8px;
     border-radius: 100%;
-    background-color: #fff;
+    background-color: #111;
 }
 input[type="radio"].radio-y:checked + label:after, 
 input[type="radio"].radio-y:not(:checked) + label:after {

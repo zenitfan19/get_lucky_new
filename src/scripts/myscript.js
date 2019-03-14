@@ -2,6 +2,15 @@
 
 $(document).ready(function () {   
     var ps; 
+    $('#acc-reg-date').mask('99-99-9999');
+    $('#acc-activity-time').mask('99:99:99');
+    $('#gift-offer-period').mask('99-99-9999');
+    $('#gift-creation-date').mask('99-99-9999');
+    $('#gift-collection-date').mask('99-99-9999');
+    $('#gift-recieving-date').mask('99-99-9999');
+    $('#supergift-creation-date').mask('99-99-9999');
+    $('#supergift-ending-date').mask('99-99-9999');
+
     $('.form-group__select select').SumoSelect();
     $('.optWrapper').prepend('<span><img class="select-up-arrow" src="assets/images/select-up.svg"></span>');
     $(document).on('click', '.header-menu__link:not(active)', function(){
