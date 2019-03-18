@@ -1,15 +1,60 @@
 .header
     .header-title GetLucky
     .header-menu
-        a.header-menu__link.active Оператор
-        a.header-menu__link Модератор
+        a.header-menu__link.active Оператор            
+        a.header-menu__link Модератор            
         a.header-menu__link Статистика
-        a.header-menu__link Аккаунты
+        a.header-menu__link Аккаунты            
         a.header-menu__link Подарки
         a.header-menu__link Изображения
         .header-exit
             a.header-exit__btn(href="")               
-                span Выход       
+                span Выход
+        .hamburger.hamburger--collapse
+            .hamburger-box
+                .hamburger-inner
+    nav.header-mobile-menu
+        .search-form-mobile
+            form(action="")
+                input(type="search", placeholder="Поиск")
+        a.header-menu__link.has-sublink.active(data-page='1') Оператор
+        .left-tabs-headers
+            a.left-tabs__link-header(data-page='1').active решенные
+            a.left-tabs__link-header(data-page='1') нерешенные
+            a.left-tabs__link-header(data-page='1') отложенные
+        a.header-menu__link.has-sublink(data-page='2') Модератор
+        .left-tabs-headers
+                a.left-tabs__link-header(data-page='2').has-sublink.active бизнес-аккаунты
+                .left-tabs.link-header-container(data-page='2').active
+                    a.left-tabs__link(data-page='2' data-header-link='1').active Прошли модерацию
+                    a.left-tabs__link(data-page='2' data-header-link='1') Не прошли модерацию
+                a.left-tabs__link-header(data-page='2').has-sublink подарки
+                .left-tabs.link-header-container(data-page='2')
+                    a.left-tabs__link(data-page='2' data-header-link='2').has-sublink.active Прошли модерацию
+                    .left-tabs.link-container(data-page='2' data-header-link='2' data-link='1')
+                        a.left-tabs__sublink(data-page='2' data-header-link='2' data-link='1' data-sublink='1').active Обычные
+                        a.left-tabs__sublink(data-page='2' data-header-link='2' data-link='1' data-sublink='2') Таргетированные
+                        a.left-tabs__sublink(data-page='2'  data-header-link='2' data-link='1' data-sublink='3') Супертаргетированные
+                        a.left-tabs__sublink(data-page='2'  data-header-link='2' data-link='1' data-sublink='4') Прикрепленные
+                    a.left-tabs__link(data-page='2' data-header-link='2').has-sublink Не прошли модерацию
+                    .left-tabs.link-container(data-page='2' data-header-link='2' data-link='2')
+                        a.left-tabs__sublink(data-page='2' data-header-link='2' data-link='2' data-sublink='1').active Обычные
+                        a.left-tabs__sublink(data-page='2' data-header-link='2' data-link='2' data-sublink='2') Таргетированные
+                        a.left-tabs__sublink(data-page='2'  data-header-link='2' data-link='2' data-sublink='3') Супертаргетированные
+                        a.left-tabs__sublink(data-page='2'  data-header-link='2' data-link='2' data-sublink='4') Прикрепленные
+        a.header-menu__link(data-page='3') Статистика
+        a.header-menu__link.has-sublink(data-page='4') Аккаунты
+        .left-tabs-headers
+            a.left-tabs__link-header(data-page='4').active бизнес-аккаунты
+            a.left-tabs__link-header(data-page='4') пользователи
+        a.header-menu__link.has-sublink(data-page='5') Подарки
+        .left-tabs-headers
+                a.left-tabs__link-header(data-page='5').active подарки
+                a.left-tabs__link-header(data-page='5') суперподарки
+                a.left-tabs__link-header(data-page='5') цена
+        a.header-menu__link(data-page='6') Изображения
+        a.header-exit__btn(href="")               
+            span Выход
 
            
         

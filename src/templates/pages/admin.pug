@@ -5,7 +5,7 @@ block variables
     - var admin = true;   
 
 block content
-    .main-container.active        
+    .main-container.active(data-page='1')        
         .page-title
             .left-tabs-headers
                 a.left-tabs__link-header(data-page='1').active решенные
@@ -114,7 +114,7 @@ block content
                             a.requests-content__link(data-fancybox data-src="#modal-text" data-options='{ "touch": false }') текст
                         td
 
-    .main-container       
+    .main-container(data-page='2')      
         .page-title
             .left-tabs-headers
                 a.left-tabs__link-header(data-page='2').active бизнес-аккаунты
@@ -255,7 +255,7 @@ block content
                         td
 
 
-    .main-container        
+    .main-container(data-page='3')        
         .right-controls
             .control-buttons
                 a.add-btn(href="")
@@ -292,7 +292,7 @@ block content
                         td                            
                         td
 
-    .main-container        
+    .main-container(data-page='4')        
         .page-title
             .left-tabs-headers
                 a.left-tabs__link-header(data-page='4').active бизнес-аккаунты
@@ -353,7 +353,7 @@ block content
                         td 
                         td 
 
-    .main-container        
+    .main-container(data-page='5')        
         .page-title
             .left-tabs-headers
                 a.left-tabs__link-header(data-page='5').active подарки
@@ -426,7 +426,7 @@ block content
                         form(action="")
                             input(type="search", placeholder="Выбор страны")
                 .gift-form.modal-form.price-form
-                    .left-form
+                    .left-form.scrollbar-rail
                         div.form-group__text
                             label(for="gift-price-common") Общий
                             input(type="text", id="gift-price-common", name="gift-price-common")
@@ -486,7 +486,7 @@ block content
                         span Удалить 
 
 
-    .main-container        
+    .main-container(data-page='6')      
         .picture-container            
             .left-block
                 .left-block-contant

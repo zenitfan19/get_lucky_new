@@ -72,3 +72,90 @@
 // .header-exit__img {
 //     margin-right: 7px;
 // }
+
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+    background-color: #fff;
+}
+.hamburger {
+    display: none;
+    z-index: 100;
+}
+.header-mobile-menu {
+    width: 300px;
+    background-color: #fff;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    a {
+        color: #000;
+    }
+}
+.header-mobile-menu.active {
+    display: block;
+}
+
+.header-mobile-menu {
+    padding: 60px 0 20px 0;
+    z-index: 99;
+    .header-menu__link {
+        text-align: center;
+        font-size: 1.1rem;
+        padding: 15px 0;
+    }
+    .header-menu__link.active {
+        background-color: #d9d9d9;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .header-menu > a, .header-menu > .header-exit, .search-form, .left-tabs-headers, .left-tabs {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    .right-controls {
+        grid-column-start: 2;
+        .control-buttons {
+            margin-right: 0;
+            a {
+                margin-right: 5px;
+                margin-left: 30px;
+            }
+        }
+    }
+    .header-mobile-menu {
+        .left-tabs-headers.open, .left-tabs.open {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            a {
+                margin-right: 0;
+                padding-left: 0;
+                padding-right: 0;
+                border: none;                
+            }
+            width: 100%;
+        }
+        .left-tabs-headers, .left-tabs {
+            display: none;
+        }
+        a.has-sublink {
+            background-image: url("../images/select-down.svg");
+            background-size: 20px 13px;
+            background-repeat: no-repeat;
+            background-position-x: 95%;
+            background-position-y: 50%; 
+            width: 100%;
+            text-align: center;                    
+        }        
+    }   
+}
+@media screen and (max-width: 1089px) {
+    .header-menu__link {
+        font-size: 0.85rem;
+    }
+}

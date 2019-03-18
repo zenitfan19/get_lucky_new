@@ -1,12 +1,25 @@
 .header
     .header-title GetLucky
     .header-menu
-        a.header-menu__link.active Журнал техподдержки
+        a.header-menu__link.active(href="") Журнал техподдержки
         a.header-menu__link(data-fancybox data-src="#modal-gift" data-options='{ "touch": false }') Модерация подарков
         a.header-menu__link(data-fancybox data-src="#modal-acc" data-options='{ "touch": false }') Модерация аккаунтов
         .header-exit
             a.header-exit__btn(href="")               
-                span Выход       
+                span Выход   
+        .hamburger.hamburger--collapse
+            .hamburger-box
+                .hamburger-inner
+    nav.header-mobile-menu
+        .search-form-mobile
+            form(action="")
+                input(type="search", placeholder="Поиск")
+        a.header-menu__link.active(href="") Журнал техподдержки
+        a.header-menu__link(data-fancybox data-src="#modal-gift" data-options='{ "touch": false }') Модерация подарков
+        a.header-menu__link(data-fancybox data-src="#modal-acc" data-options='{ "touch": false }') Модерация аккаунтов
+        a.header-exit__btn(href="")               
+            span Выход
+
 
            
         

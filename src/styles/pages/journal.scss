@@ -49,11 +49,11 @@ tr {
     color:#006bf2;
     
 }
-.search-form {
+.search-form, .search-form-mobile {
     align-self: flex-end;    
 }
 
-.search-form input {
+.search-form input, .search-form-mobile input {
     width: 233px;
     height: 35px;
     background: #FFFFFF;
@@ -74,17 +74,30 @@ tr {
 
     padding-left: 33px;
 }
-.search-form input::-webkit-input-placeholder {
+.search-form input::-webkit-input-placeholder, .search-form-mobile input::-webkit-input-placeholder {
     color: #BDBDBD;
 }
-.search-form input::-moz-placeholder {
+.search-form input::-moz-placeholder, .search-form-mobile input::-moz-placeholder {
     color: #BDBDBD;
 }
-.search-form input:-moz-placeholder {
+.search-form input:-moz-placeholder, .search-form-mobile input:-moz-placeholder {
     color: #BDBDBD;
 }
-.search-form input:-ms-input-placeholder {
+.search-form input:-ms-input-placeholder, .search-form-mobile input:-ms-input-placeholder {
     color: #BDBDBD;
+}
+.search-form-mobile input {
+    width: 100%;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid #32383e;
+    border-top: 1px solid #32383e;
+    .search-form-mobile input:focus {
+        border: none;
+    }    
+}
+.search-form-mobile {
+    margin: 10px 0;    
 }
 
 #modal-phone {
@@ -221,4 +234,19 @@ tr {
 }
 .modal-phone-buttons-new {
     margin-top: 22px;
+}
+
+.scroll-element {
+    background-color: transparent !important;    
+}
+.scrollbar-rail > .scroll-element .scroll-bar {
+    background-color: #4A5B6D;
+    width: 7px !important;
+    left: 3px !important;
+}
+.scrollbar-rail > .scroll-element .scroll-element_size {
+    background-color: #4A5B6D;
+}
+.scrollbar-rail > .scroll-element .scroll-element_size:hover {
+    background-color: #4A5B6D;
 }

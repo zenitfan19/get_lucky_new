@@ -1,6 +1,48 @@
 //Переключение табов
 
-$(document).ready(function () {   
+$(document).ready(function () {  
+    $('.scrollbar-rail').scrollbar(); 
+    $(document).on('click', '.hamburger', function () {
+        $(document).find('.header-mobile-menu').addClass('active fadeInRight animated');
+        if ($(this).hasClass('is-active')) {
+              $(document).find('.header-mobile-menu').removeClass('fadeInRight');
+              $(document).find('.header-mobile-menu').addClass('fadeOutRight');
+        } else {
+              $(document).find('.header-mobile-menu').removeClass('fadeOutRight');
+        }
+        $(this).toggleClass('is-active');
+  });
+//   $(window).scroll(function () {
+//         if ($(this).scrollTop() > 1) {
+//               $(document).find('.header-mobile-menu').removeClass('fadeInRight');
+//               $(document).find('.header-mobile-menu').addClass('fadeOutRight');
+//               $(document).find('.hamburger').removeClass('is-active');
+//         }
+//   });
+  $(document).mouseup(function (e) { // событие клика по веб-документу
+        var div = $('.header-mobile-menu'); // тут указываем сласс элемента
+        if ($('.hamburger').is(e.target) || $('.hamburger-box').is(e.target) || $('.hamburger-inner').is(e.target)) {
+              return;
+        }
+        if (!div.is(e.target) && div.has(e.target).length === 0) { // если клик был не по нашему блоку и не по его дочерним элементам
+              div.removeClass('fadeInRight');
+              div.addClass('fadeOutRight'); // скрываем его
+              $(document).find('.hamburger').removeClass('is-active'); // меняем значок гамбургера
+        }
+  });
+  $(function () {
+        $(window).resize(function () {
+              if (screen.width > 1024) {
+                    $(document).find('.hamburger').removeClass('is-active');
+                    $(document).find('.header-mobile-menu').removeClass('active');
+                    $(document).find('.header-mobile-menu').removeClass('fadeOutRight');
+                    $(document).find('.header-mobile-menu').removeClass('animated');
+              }
+        });
+  });
+
+    
+    
     var ps; 
     $('#acc-reg-date').mask('99-99-9999');
     $('#acc-activity-time').mask('99:99:99');
@@ -15,8 +57,21 @@ $(document).ready(function () {
     $('.optWrapper').prepend('<span><img class="select-up-arrow" src="assets/images/select-up.svg"></span>');
     $(document).on('click', '.header-menu__link:not(active)', function(){
         $(this).addClass('active').siblings('.header-menu__link').removeClass('active');    
-        $('.main-container').removeClass('active').eq($(this).index()).addClass('active'); 
+        $('.main-container').removeClass('active').eq($(this).index()).addClass('active');         
         var page_number = $(this).index()+1;
+        var active_header_link = $('.left-tabs__link-header*[data-page='+page_number+'].active').index()+1;
+        if(((page_number==4) && (active_header_link==2)) || (((page_number==5) && (active_header_link==2)))) {
+            $('.add-btn').css('display', 'block');
+        } else {
+            $('.add-btn').css('display', 'none');
+        }          
+        
+    });
+    $(document).on('click', '.header-mobile-menu > .header-menu__link:not(active)', function(){
+        $(this).addClass('active').siblings('.header-menu__link').removeClass('active');    
+        $('.main-container').removeClass('active');         
+        var page_number = $(this).data('page');
+        $('.main-container*[data-page='+page_number+']').addClass('active');
         var active_header_link = $('.left-tabs__link-header*[data-page='+page_number+'].active').index()+1;
         if(((page_number==4) && (active_header_link==2)) || (((page_number==5) && (active_header_link==2)))) {
             $('.add-btn').css('display', 'block');
@@ -44,14 +99,15 @@ $(document).ready(function () {
             $('.add-btn').css('display', 'none');
         }
         if((page_number==5) && (active_header_link==3)) {
-            setTimeout(function(){
-                ps = new PerfectScrollbar('.left-form');
-            }, 50);            
-            $('.left-form').trigger('ps-scroll-y');
+            // setTimeout(function(){
+            //     ps = new PerfectScrollbar('.left-form');
+            // }, 50);            
+            // $('.left-form').trigger('ps-scroll-y');
+
         } else {
-            if(ps) {
-                ps.destroy();
-            }
+            // if(ps) {
+            //     ps.destroy();
+            // }
             
         }
 
